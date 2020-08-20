@@ -1,5 +1,5 @@
 getText ``EDITOR``
-=======
+==================
 
 getText API extracts the content from the INK Editor and parse it into plain text string as a resultant value.
 
