@@ -1,9 +1,9 @@
-CLI Usage
-=========
+INK CLI Usage
+=============
 
 
-Installation: 
-+++++++++++++
+Installation: (TBD)
++++++++++++++++++++
 
 using npm
 

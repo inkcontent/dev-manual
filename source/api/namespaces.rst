@@ -2,18 +2,32 @@ API Namespaces
 ==============
 
 
-
+EDITOR
+++++++
 
 .. toctree::
-	:maxdepth: 2
-	:caption: IO:
+	:maxdepth: 1
+   
+	editor/getHTML
+	editor/getText
+
+
+IO
+++
+
+.. toctree::
+	:maxdepth: 1
    
 	io/saveFile
 
 
+UI
+++
+
+menu
+----
+
 .. toctree::
-	:maxdepth: 2
-	:caption: Editor:
+	:maxdepth: 1
    
-	editor/getHTML
-	editor/getText
+	ui/menu.addMenuItem
