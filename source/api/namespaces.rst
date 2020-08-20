@@ -1,6 +1,7 @@
 API Namespaces
 ==============
 
+INK APIs are grouped in namespaces according to their functionalities. You can see the available namespaces below.
 
 EDITOR
 ++++++
