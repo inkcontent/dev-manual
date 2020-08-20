@@ -10,29 +10,21 @@ Welcome to INK API's documentation!
 
 .. toctree::
 	:maxdepth: 2
-	:caption: Quick start:
+	:caption: Getting Started:
 	
-	getting-started/hello-world
-
-
-.. toctree::
-	:maxdepth: 2
-	:caption: API Overview:
-	
-	api-overview/ink-ext-basics
-	api-overview/package-json
+	getting-started/index
    
 .. toctree::
 	:maxdepth: 2
 	:caption: Command line tools:
 	
-	cli/intro
+	cli/index
 	cli/usage
 
 .. toctree::
 	:maxdepth: 2
-	:caption: Extensions API:
+	:caption: APIs:
 	
-	api/intro
+	api/index
 	api/namespaces
 
