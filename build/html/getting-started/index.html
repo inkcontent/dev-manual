@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; INK API 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/ink.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="INK CLI Intro" href="../cli/index.html" />
+    <link rel="prev" title="Welcome to INK API’s documentation!" href="../contents.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home" alt="Documentation Home"> INK API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#quick-start">Quick Start</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Command line tools:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/index.html">INK CLI Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/usage.html">INK CLI Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">APIs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">INK API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/getting-started/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>INK plugin is a piece of software containing a group of functions that can extend the core functionality of INK Editor. INK Plugins are written with pure vanilla JavaScript and they make use of INK APIs for building functionality on top of what INK Editor already offers.</p>
+<p>INK Plugins allows you to greatly extend and expand the functionality of INK Editor. INK plugin can be as simple or as complicated as per your needs.</p>
+</div>
+<div class="section" id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<p>To get started creating an INK plugin, follow the steps below.</p>
+<ol class="arabic simple">
+<li>Initialize NPM project in a directory using <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">init</span> <span class="pre">-y</span></code></li>
+<li>Create an entry js file (Make sure package.json file’s <code class="docutils literal notranslate"><span class="pre">main</span></code> field points toward this file)</li>
+<li>Copy the <code class="docutils literal notranslate"><span class="pre">ink-api.js</span></code> file to the root directory. (This file can be downloaded from &lt;&lt;TBD&gt;&gt;)</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Include INK Editor version, you want your plugin to support in <code class="docutils literal notranslate"><span class="pre">package.json</span></code> under <code class="docutils literal notranslate"><span class="pre">engines</span> <span class="pre">&gt;</span> <span class="pre">ink</span></code></p>
+</div>
+<p>In its simplest form, the plugin entry JS file looks like this.</p>
+<div class="code js highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">INKAPI</span> <span class="kn">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+
+<span class="n">INKAPI</span><span class="o">.</span><span class="n">ready</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="n">const</span> <span class="n">UI</span><span class="o">=</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">ui</span><span class="p">;</span>
+  <span class="n">const</span> <span class="n">IO</span><span class="o">=</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">io</span><span class="p">;</span>
+  <span class="n">const</span> <span class="n">Editor</span><span class="o">=</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">editor</span><span class="p">;</span>
+
+  <span class="o">//</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span>
+
+  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hello, INK Plugin World!&quot;</span><span class="p">);</span>
+
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>In the above example, we are importing <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code> and making use of its ready function that takes a callback function. This helps us initiate our plugin code once the INK APIs are ready to use. Also you can see some api namespaces that are available through INKAPI.</p>
+<p>You can do all of the above using INK cli tool.</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ink</span><span class="o">-</span><span class="n">cli</span> <span class="n">generate</span> <span class="n">my</span><span class="o">-</span><span class="n">plugin</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>More on INK API Namespaces in <a class="reference external" href="/api">APIs</a> section.</li>
+<li>More on INK CLI Tool in <a class="reference external" href="/cli">Command</a> <a class="reference external" href="/cli">Line Tools</a> section.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cli/index.html" class="btn btn-neutral float-right" title="INK CLI Intro" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../contents.html" class="btn btn-neutral float-left" title="Welcome to INK API’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, EDGY Labs.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
