@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="INK CLI Intro" href="../cli/index.html" />
+    <link rel="next" title="Package JSON File" href="packageJsonFile.html" />
     <link rel="prev" title="Welcome to INK API’s documentation!" href="../index.html" /> 
 </head>
 
@@ -87,6 +87,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#quick-start">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packageJsonFile.html">Package JSON File</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Command line tools:</span></p>
 <ul>
@@ -169,17 +170,17 @@
 </div>
 <div class="section" id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
-<p>To get started creating an INK plugin, follow the steps below.</p>
+<p>To quickly get started creating INK plugins, follow the steps below.</p>
 <ol class="arabic simple">
-<li>Initialize NPM project in a directory using <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">init</span> <span class="pre">-y</span></code></li>
-<li>Create an entry js file (Make sure package.json file’s <code class="docutils literal notranslate"><span class="pre">main</span></code> field points toward this file)</li>
-<li>Copy the <code class="docutils literal notranslate"><span class="pre">ink-api.js</span></code> file to the root directory. (This file can be downloaded from &lt;&lt;TBD&gt;&gt;)</li>
+<li>Install INK CLI tool <code class="docutils literal notranslate"><span class="pre">inkplugin</span></code> globally using <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">-g</span> <span class="pre">inkplugin</span></code></li>
+<li>Create INK Plugin project using <code class="docutils literal notranslate"><span class="pre">inkplugin</span> <span class="pre">generate</span> <span class="pre">&lt;your-project-name&gt;</span></code></li>
+<li>Start writing your plugin code in the <code class="docutils literal notranslate"><span class="pre">main.js</span></code> using INK <a class="reference external" href="/api">APIs</a>.</li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Include INK Editor version, you want your plugin to support in <code class="docutils literal notranslate"><span class="pre">package.json</span></code> under <code class="docutils literal notranslate"><span class="pre">engines</span> <span class="pre">&gt;</span> <span class="pre">ink</span></code></p>
+<p class="last">Under <code class="docutils literal notranslate"><span class="pre">engines</span></code> section in <code class="docutils literal notranslate"><span class="pre">package.json</span></code>, cli tool will automatically add the latest version for INK Editor support. you can change it as per your needs.</p>
 </div>
-<p>In its simplest form, the plugin entry JS file looks like this.</p>
+<p>In its simplest form, the plugin main entry JS file looks like this.</p>
 <div class="code js highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">INKAPI</span> <span class="kn">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
 <span class="n">INKAPI</span><span class="o">.</span><span class="n">ready</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -195,10 +196,6 @@
 </pre></div>
 </div>
 <p>In the above example, we are importing <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code> and making use of its ready function that takes a callback function. This helps us initiate our plugin code once the INK APIs are ready to use. Also you can see some api namespaces that are available through INKAPI.</p>
-<p>You can do all of the above using INK cli tool.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ink</span><span class="o">-</span><span class="n">cli</span> <span class="n">generate</span> <span class="n">my</span><span class="o">-</span><span class="n">plugin</span>
-</pre></div>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
@@ -216,7 +213,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cli/index.html" class="btn btn-neutral float-right" title="INK CLI Intro" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="packageJsonFile.html" class="btn btn-neutral float-right" title="Package JSON File" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to INK API’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

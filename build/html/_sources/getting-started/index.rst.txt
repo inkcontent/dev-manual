@@ -8,17 +8,17 @@ INK Plugins allows you to greatly extend and expand the functionality of INK Edi
 Quick Start
 ===========
 
-To get started creating an INK plugin, follow the steps below.
+To quickly get started creating INK plugins, follow the steps below.
 
-#. Initialize NPM project in a directory using ``npm init -y``
-#. Create an entry js file (Make sure package.json file's ``main`` field points toward this file)
-#. Copy the ``ink-api.js`` file to the root directory. (This file can be downloaded from <<TBD>>)
+#. Install INK CLI tool ``inkplugin`` globally using ``npm install -g inkplugin``
+#. Create INK Plugin project using ``inkplugin generate <your-project-name>``
+#. Start writing your plugin code in the ``main.js`` using INK APIs_.
 
 .. note:: 
 
-    Include INK Editor version, you want your plugin to support in ``package.json`` under ``engines > ink``
+    Under ``engines`` section in ``package.json``, cli tool will automatically add the latest version for INK Editor support. you can change it as per your needs.
 
-In its simplest form, the plugin entry JS file looks like this.
+In its simplest form, the plugin main entry JS file looks like this.
 
 .. code:: js
 
@@ -37,12 +37,6 @@ In its simplest form, the plugin entry JS file looks like this.
 
 In the above example, we are importing ``INKAPI`` and making use of its ready function that takes a callback function. This helps us initiate our plugin code once the INK APIs are ready to use. Also you can see some api namespaces that are available through INKAPI. 
 
-You can do all of the above using INK cli tool.
-
-.. code::
-
-  ink-cli generate my-plugin
-
 .. note::
 
     - More on INK API Namespaces in APIs_ section.
@@ -54,5 +48,3 @@ You can do all of the above using INK cli tool.
 __ Command_
 
 .. _APIs: /api
-
-

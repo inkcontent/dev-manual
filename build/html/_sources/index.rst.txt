@@ -13,6 +13,7 @@ Welcome to INK API's documentation!
 	:caption: Getting Started:
 	
 	getting-started/index
+	getting-started/packageJsonFile
    
 .. toctree::
 	:maxdepth: 2
