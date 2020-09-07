@@ -1,7 +1,7 @@
 INK CLI Intro
 =============
 
-INK CLI ``ink-cli`` is a command line interface for INK plugin developers, to assist them in plugin development tasks including:
+INK CLI ``inkplugin`` is a command line interface for INK plugin developers, to assist them in plugin development tasks including:
 
 #. Generating Starter Plugin Project
 #. Packaging Plugin Project

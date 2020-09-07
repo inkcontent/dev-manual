@@ -2,20 +2,20 @@ INK CLI Usage
 =============
 
 
-Installation: (TBD)
+Installation:
 +++++++++++++++++++
 
 using npm
 
 .. code::
 
-  >  npm install -g ink-cli 
+  >  npm install -g inkplugin 
 
 or using yarn
 
 .. code::
 
-  >  yarn global add ink-cli 
+  >  yarn global add inkplugin 
 
 Generate INK plugin project: 
 ++++++++++++++++++++++++++++
@@ -24,7 +24,7 @@ To generate INK plugin project you can simply use ``generate`` command with the 
 
 .. code::
 
-  >  ink-cli generate <Project Name>
+  >  inkplugin generate <Project Name>
 
 
 It will create directory named ``ink-plugin`` in current directory ``./``, if name (or path) is not provided.
@@ -49,7 +49,7 @@ To package INK plugin you can use ``package`` command with the path to the proje
 
 .. code::
 
-  >  ink-cli package <Project Path>
+  >  inkplugin package <Project Path>
 
 It will package current directory ``./``, if no path is provided.
 

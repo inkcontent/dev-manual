@@ -87,12 +87,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html#quick-start">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package JSON File</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Command line tools:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">INK CLI Intro</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">INK CLI Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation-tbd">Installation: (TBD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-ink-plugin-project">Generate INK plugin project:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#package-ink-plugin-project">Package INK plugin project:</a></li>
 </ul>
@@ -169,21 +170,21 @@
             
   <div class="section" id="ink-cli-usage">
 <h1>INK CLI Usage<a class="headerlink" href="#ink-cli-usage" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="installation-tbd">
-<h2>Installation: (TBD)<a class="headerlink" href="#installation-tbd" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation">
+<h2>Installation:<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>using npm</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">ink</span><span class="o">-</span><span class="n">cli</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">inkplugin</span>
 </pre></div>
 </div>
 <p>or using yarn</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">yarn</span> <span class="k">global</span> <span class="n">add</span> <span class="n">ink</span><span class="o">-</span><span class="n">cli</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">yarn</span> <span class="k">global</span> <span class="n">add</span> <span class="n">inkplugin</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="generate-ink-plugin-project">
 <h2>Generate INK plugin project:<a class="headerlink" href="#generate-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
 <p>To generate INK plugin project you can simply use <code class="docutils literal notranslate"><span class="pre">generate</span></code> command with the name (or path) for the plugin project.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">ink</span><span class="o">-</span><span class="n">cli</span> <span class="n">generate</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Name</span><span class="o">&gt;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">generate</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>It will create directory named <code class="docutils literal notranslate"><span class="pre">ink-plugin</span></code> in current directory <code class="docutils literal notranslate"><span class="pre">./</span></code>, if name (or path) is not provided.</p>
@@ -202,7 +203,7 @@
 <div class="section" id="package-ink-plugin-project">
 <h2>Package INK plugin project:<a class="headerlink" href="#package-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
 <p>To package INK plugin you can use <code class="docutils literal notranslate"><span class="pre">package</span></code> command with the path to the project directory.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">ink</span><span class="o">-</span><span class="n">cli</span> <span class="n">package</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Path</span><span class="o">&gt;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">package</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Path</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>It will package current directory <code class="docutils literal notranslate"><span class="pre">./</span></code>, if no path is provided.</p>
