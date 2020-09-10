@@ -1,7 +1,7 @@
 This is the INK for developers documentation generator.
 
 ## Note:
-This documentation is a work-in-progress. Please do not use/follow the instructions as we're still working on implementation.
+👉🏼 This documentation is a work-in-progress. Please do not use/follow the instructions as we're still working on implementation.
 
 Usage
 =====
