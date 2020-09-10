@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -27,10 +27,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -87,6 +87,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html#quick-start">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package JSON File</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Command line tools:</span></p>
 <ul>
@@ -167,8 +168,8 @@
 <p>INK Editor provides some functions from its core for plugin developers to use, allowing plugins to interact with INK Editor core safely and making interactions possible. These functions are divided into namespaces according to their functionalities and all of them combines to form INK APIs.</p>
 <p>INK APIs are available for every plugin through <code class="docutils literal notranslate"><span class="pre">ink-api.js</span></code> file, which is mandatory file for plugin project.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Each INK API function will return a promise with a resultant value (if applicable).</p>
+<p class="admonition-title">Note</p>
+<p>Each INK API function will return a promise with a resultant value (if applicable).</p>
 </div>
 </div>
 
