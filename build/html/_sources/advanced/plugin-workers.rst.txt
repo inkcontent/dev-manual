@@ -11,4 +11,4 @@ You can simply choose to execute your plugin in module worker by using --module-
 
   inkplugin create <your-plugin-name> --module-worker
 
-This will create a ``module`` field with `true` value under ``inkplugin`` section in your package.json file indicating that your plugin will support ES6 modules.
+This will create a ``module`` field with `true` value under ``inkplugin`` section in your package.json file indicating that your plugin will support ES6 modules and will be loaded in module worker.
