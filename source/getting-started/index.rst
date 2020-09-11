@@ -11,7 +11,7 @@ Quick Start
 To quickly get started creating INK plugins, follow the steps below.
 
 #. Install INK CLI tool ``inkplugin`` globally using ``npm install -g inkplugin``
-#. Create INK Plugin project using ``inkplugin generate <your-project-name>``
+#. Create INK Plugin project using ``inkplugin create <your-project-name>``
 #. Start writing your plugin code in the ``main.js`` using INK APIs_.
 
 .. note:: 

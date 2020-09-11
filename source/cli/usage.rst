@@ -17,14 +17,14 @@ or using yarn
 
   >  yarn global add inkplugin 
 
-Generate INK plugin project: 
+Create INK plugin project: 
 ++++++++++++++++++++++++++++
 
-To generate INK plugin project you can simply use ``generate`` command with the name (or path) for the plugin project.
+To create INK plugin project you can simply use ``create`` command with the name (or path) for the plugin project.
 
 .. code::
 
-  >  inkplugin generate <Project Name>
+  >  inkplugin create <Project Name>
 
 
 It will create directory named ``ink-plugin`` in current directory ``./``, if name (or path) is not provided.

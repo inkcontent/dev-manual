@@ -29,3 +29,10 @@ Welcome to INK API's documentation!
 	api/index
 	api/namespaces
 
+.. toctree::
+	:maxdepth: 2
+	:caption: Advanced:
+	
+	advanced/plugin-workers
+	
+
