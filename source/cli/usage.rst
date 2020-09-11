@@ -34,13 +34,13 @@ The above command will create a following project structure.
 .. code::
 
   ├── ink-plugin
-     ├── ink-api.js
+     ├── inkapi.js
      ├── main.js
      ├── package.json
 
 .. warning::
 
-    It is strictly recommended to always keep ``ink-api.js`` in root directory of your project.
+    It is strictly recommended to always keep ``inkapi.js`` in root directory of your project.
 
 Package INK plugin project: 
 +++++++++++++++++++++++++++
@@ -60,5 +60,5 @@ The above command will create a packaged plugin file in project root directory. 
     Before packaging, make sure your project meets the following requirements.
 
     * Project root directory must contain a package.json file.
-    * Project root directory must contain a ink-api.js file.
+    * Project root directory must contain a inkapi.js file.
     * package.json ``main`` field should point towards the entry js file.
