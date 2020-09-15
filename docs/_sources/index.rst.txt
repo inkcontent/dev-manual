@@ -9,23 +9,34 @@ Welcome to INK API's documentation!
    INK Extensions are in an early developement stage, please check this page frequently for updates.
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: Getting Started:
 	
 	getting-started/index
 	getting-started/packageJsonFile
    
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: Command line tools:
 	
 	cli/index
 	cli/usage
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: APIs:
 	
 	api/index
 	api/namespaces
+	api/editor/getHTML
+	api/editor/getText
+	api/io/saveFile
+	api/ui/menu.addMenuItem
+
+.. toctree::
+	:maxdepth: 1
+	:caption: Advanced:
+	
+	advanced/plugin-workers
+	
 
