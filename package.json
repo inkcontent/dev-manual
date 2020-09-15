@@ -1,0 +1,9 @@
+{
+  "private": true,
+
+  "scripts": {
+    "prebuild": "node chores/cleanup.js",
+    "build": "make html",
+    "postbuild": "node chores/copy.js"
+  }
+}
