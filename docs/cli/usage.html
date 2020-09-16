@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -27,10 +27,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -181,48 +181,48 @@
 <div class="section" id="installation">
 <h2>Installation:<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>using npm</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">inkplugin</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">inkplugin</span>
 </pre></div>
 </div>
 <p>or using yarn</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">yarn</span> <span class="k">global</span> <span class="n">add</span> <span class="n">inkplugin</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">yarn</span> <span class="k">global</span> <span class="n">add</span> <span class="n">inkplugin</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="create-ink-plugin-project">
 <h2>Create INK plugin project:<a class="headerlink" href="#create-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
 <p>To create INK plugin project you can simply use <code class="docutils literal notranslate"><span class="pre">create</span></code> command with the name (or path) for the plugin project.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">create</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Name</span><span class="o">&gt;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">create</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>It will create directory named <code class="docutils literal notranslate"><span class="pre">ink-plugin</span></code> in current directory <code class="docutils literal notranslate"><span class="pre">./</span></code>, if name (or path) is not provided.</p>
 <p>The above command will create a following project structure.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── ink-plugin
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>├── ink-plugin
    ├── inkapi.js
    ├── main.js
    ├── package.json
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It is strictly recommended to always keep <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> in root directory of your project.</p>
+<p class="first admonition-title">Warning</p>
+<p class="last">It is strictly recommended to always keep <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> in root directory of your project.</p>
 </div>
 </div>
 <div class="section" id="package-ink-plugin-project">
 <h2>Package INK plugin project:<a class="headerlink" href="#package-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
 <p>To package INK plugin you can use <code class="docutils literal notranslate"><span class="pre">package</span></code> command with the path to the project directory.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">package</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Path</span><span class="o">&gt;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">package</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Path</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>It will package current directory <code class="docutils literal notranslate"><span class="pre">./</span></code>, if no path is provided.</p>
 <p>The above command will create a packaged plugin file in project root directory. which can be used to install your plugin in INK editor.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>Before packaging, make sure your project meets the following requirements.</p>
-<ul class="simple">
-<li><p>Project root directory must contain a package.json file.</p></li>
-<li><p>Project root directory must contain a inkapi.js file.</p></li>
-<li><p>package.json <code class="docutils literal notranslate"><span class="pre">main</span></code> field should point towards the entry js file.</p></li>
+<ul class="last simple">
+<li>Project root directory must contain a package.json file.</li>
+<li>Project root directory must contain a inkapi.js file.</li>
+<li>package.json <code class="docutils literal notranslate"><span class="pre">main</span></code> field should point towards the entry js file.</li>
 </ul>
 </div>
 </div>
