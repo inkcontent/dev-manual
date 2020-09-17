@@ -24,10 +24,7 @@ To create INK plugin project you can simply use ``create`` command with the name
 
 .. code::
 
-  >  inkplugin create <Project Name>
-
-
-It will create directory named ``ink-plugin`` in current directory ``./``, if name (or path) is not provided.
+  >  inkplugin create <Path or Project Name>
 
 The above command will create a following project structure.
 
@@ -37,10 +34,14 @@ The above command will create a following project structure.
      ├── inkapi.js
      ├── main.js
      ├── package.json
+     ├── readme.md
+     ├── sample.png
+
+You can also enable ES6 modules support for your plugin by using ``--module-worker`` flag while creating the project. More information about module workers here_.
 
 .. warning::
 
-    It is strictly recommended to always keep ``inkapi.js`` in root directory of your project.
+    It is mandatory to always keep ``inkapi.js`` in root directory of your project. ``inkapi`` ensures the right communication between the plugin context and INK editor context. While plugin installation, INK editor expects the ``inkapi.js`` to be present in the root directory of your project.
 
 Package INK plugin project: 
 +++++++++++++++++++++++++++
@@ -62,3 +63,6 @@ The above command will create a packaged plugin file in project root directory. 
     * Project root directory must contain a package.json file.
     * Project root directory must contain a inkapi.js file.
     * package.json ``main`` field should point towards the entry js file.
+
+
+.. _here: ../advanced/plugin-workers.html
