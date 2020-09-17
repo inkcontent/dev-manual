@@ -28,11 +28,7 @@ Welcome to INK API's documentation!
 	
 	api/index
 	api/namespaces
-	api/editor/getHTML
-	api/editor/getText
-	api/io/saveFile
-	api/ui/menu.addMenuItem
-
+	
 .. toctree::
 	:maxdepth: 1
 	:caption: Advanced:
