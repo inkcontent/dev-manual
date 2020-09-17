@@ -5,7 +5,7 @@ Each plugin in INK runs on a separate worker using `Web Workers API <https://dev
 
 INK allows plugins to run on either ``Standard Worker`` or ``Module Worker``. The module workers provides the ability to use the JavaScript ``import`` statement to import other modules; strict mode by default; and top-level declarations not polluting the worker's global scope.
 
-You can simply choose to execute your plugin in module worker by using --module-worker flag while creating your plugin project.
+You can simply choose to execute your plugin in module worker by using ``--module-worker`` flag while creating your plugin project.
 
 .. code::
 

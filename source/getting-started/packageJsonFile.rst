@@ -31,4 +31,4 @@ You can see in the above package.json file we make use of a lot of standard pack
 
 .. warning::
 
-  You should never alter the ``id`` field inside ``inkplugin`` custom section. As this will compromise the integrity of your plugin and it might get unstable.
+  It is prohibited to modify the ``id`` field in ``inkplugin`` section of your package.json file. This field uniquely identifies your plugin and it is used in operations like updating/activating/deactivating plugin.
