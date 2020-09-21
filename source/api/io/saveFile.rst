@@ -23,9 +23,9 @@ saveFile API is used to write content on user disk. It opens a dialog box and pr
 Parameters
 ++++++++++
 
-``content``: String | Blob
+``content``: String | ArrayBuffer
 
-First parameter will accept content in the form of either ``String`` or a ``File`` blob.
+First parameter will accept content in the form of either ``String`` or an ``ArrayBuffer``.
 
 ``Extension``: String
 
