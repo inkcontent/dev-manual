@@ -83,7 +83,7 @@ Now, let's try to retrieve the INK editor content and save it to user disk in ht
     async function clickHandler(){
     
       //do something on menu click
-      const Editor= INKAPI.Editor;
+      const Editor= INKAPI.editor;
       const IO= INKAPI.io;
 
       const htmlString = await Editor.getHTML(); //retrieve editor content in html format.
