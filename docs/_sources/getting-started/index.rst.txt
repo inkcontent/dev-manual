@@ -55,7 +55,7 @@ Let's try to add a menu item in INK using the ``UI`` API Namespace.
       const UI= INKAPI.ui;
       
       //your code here
-      UI.menu.addMenuItem(menuClickHandler, "File", "Export", "as Demo HTML");
+      UI.menu.addMenuItem(clickHandler, "File", "Export", "as Demo HTML");
 
     });
 
@@ -76,7 +76,7 @@ Now, let's try to retrieve the INK editor content and save it to user disk in ht
       const UI= INKAPI.ui;
       
       //your code here
-      UI.menu.addMenuItem(menuClickHandler, "File", "Export", "as Demo HTML");
+      UI.menu.addMenuItem(clickHandler, "File", "Export", "as Demo HTML");
 
     });
 
