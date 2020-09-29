@@ -1,9 +1,11 @@
 Introduction
 ============
 
-INK plugin is a piece of software containing a group of functions that can extend the core functionality of INK Editor. INK Plugins are written with pure vanilla JavaScript and they make use of INK APIs for building functionality on top of what INK Editor already offers.
+INK software is used by tens of thousands of content creators to make their content get found, be more engaging and convert.
 
-INK Plugins allows you to greatly extend and expand the functionality of INK Editor. INK plugin can be as simple or as complicated as per your needs. 
+With plugins you can greatly extend and expand the functionality of the INK Editor. At launch, you are able to create export plugins. We are quickly expanding the power of the API to enable new types of plugins. You can find some demo plugins here.
+
+We designed our plugin architecture with developers in mind. You can make a fully functioning plugin in minutes, using vanilla JavaScript and our handy command line tools.
 
 Quick Start
 ===========

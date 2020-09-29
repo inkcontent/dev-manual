@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -27,10 +27,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -171,7 +171,7 @@
 <p>Each plugin in INK runs on a separate worker using <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>. This helps INK to keep each plugin execution environment separate and avoid any sort of collisions.</p>
 <p>INK allows plugins to run on either <code class="docutils literal notranslate"><span class="pre">Standard</span> <span class="pre">Worker</span></code> or <code class="docutils literal notranslate"><span class="pre">Module</span> <span class="pre">Worker</span></code>. The module workers provides the ability to use the JavaScript <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to import other modules; strict mode by default; and top-level declarations not polluting the worker’s global scope.</p>
 <p>You can simply choose to execute your plugin in module worker by using <code class="docutils literal notranslate"><span class="pre">--module-worker</span></code> flag while creating your plugin project.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inkplugin</span> <span class="n">create</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">module</span><span class="o">-</span><span class="n">worker</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inkplugin</span> <span class="n">create</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">module</span><span class="o">-</span><span class="n">worker</span>
 </pre></div>
 </div>
 <p>This will create a <code class="docutils literal notranslate"><span class="pre">module</span></code> field with <cite>true</cite> value under <code class="docutils literal notranslate"><span class="pre">inkplugin</span></code> section in your package.json file indicating that your plugin will support ES6 modules and will be loaded in module worker.</p>
