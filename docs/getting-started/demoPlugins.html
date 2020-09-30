@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>INK APIs Introduction &mdash; INK API 2.0 documentation</title>
+  <title>Demo plugins &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Namespaces" href="namespaces.html" />
-    <link rel="prev" title="INK CLI Usage" href="../cli/usage.html" /> 
+    <link rel="next" title="Quick Start" href="quickStart.html" />
+    <link rel="prev" title="Introduction" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,11 +84,14 @@
             
             
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/demoPlugins.html">Demo plugins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/quickStart.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package JSON File</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Demo plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#export-plugins">Export plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickStart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packageJsonFile.html">Package JSON File</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Command line tools:</span></p>
 <ul>
@@ -96,9 +99,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../cli/usage.html">INK CLI Usage</a></li>
 </ul>
 <p class="caption"><span class="caption-text">APIs:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">INK APIs Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="namespaces.html">API Namespaces</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced:</span></p>
 <ul>
@@ -149,13 +152,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>INK APIs Introduction</li>
+      <li>Demo plugins</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/api/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/getting-started/demoPlugins.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -168,13 +171,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ink-apis-introduction">
-<h1>INK APIs Introduction<a class="headerlink" href="#ink-apis-introduction" title="Permalink to this headline">¶</a></h1>
-<p>INK Editor provides some functions from its core for plugin developers to use, allowing plugins to interact with INK Editor core safely and making interactions possible. These functions are divided into namespaces according to their functionalities and all of them combines to form INK APIs.</p>
-<p>INK APIs are available for every plugin through <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> file, which is mandatory file for plugin project.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Each INK API function will return a promise with a resultant value (if applicable).</p>
+  <div class="section" id="demo-plugins">
+<h1>Demo plugins<a class="headerlink" href="#demo-plugins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="export-plugins">
+<h2>Export plugins<a class="headerlink" href="#export-plugins" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="#">Docxporter</a> - exports INK file to MS Word Docx format.</p></li>
+</ul>
+</div></blockquote>
+<p>Did you create a cool plugin you want us to add to this list? Email <a class="reference external" href="mailto:aladdin&#37;&#52;&#48;edgylabs&#46;com">aladdin<span>&#64;</span>edgylabs<span>&#46;</span>com</a></p>
+<p><strong>Legal:</strong>
+INK does not endorse and is not responsible or liable for any content, advertising, products, or other materials developed with the use of the Component. INK will not be responsible or liable for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services developed through the use of the Component.</p>
 </div>
 </div>
 
@@ -186,10 +194,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="namespaces.html" class="btn btn-neutral float-right" title="API Namespaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="quickStart.html" class="btn btn-neutral float-right" title="Quick Start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../cli/usage.html" class="btn btn-neutral float-left" title="INK CLI Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

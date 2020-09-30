@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick Start &mdash; INK API 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/ink.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Package JSON File" href="packageJsonFile.html" />
+    <link rel="prev" title="Demo plugins" href="demoPlugins.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> INK API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoPlugins.html">Demo plugins</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add-menu-item">Add Menu Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packaging-plugin">Packaging Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plugin-installation">Plugin Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packageJsonFile.html">Package JSON File</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Command line tools:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/index.html">INK CLI Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/usage.html">INK CLI Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">APIs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/plugin-workers.html">Plugin Workers</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">INK API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Quick Start</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/getting-started/quickStart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<iframe width="100%" height="392" src="https://www.youtube.com/embed/PXwtQPNyGLU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br><br><p>To quickly get started creating INK plugins, follow the steps below.</p>
+<ol class="arabic simple">
+<li><p>Install INK CLI tool <code class="docutils literal notranslate"><span class="pre">inkplugin</span></code> globally using <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">-g</span> <span class="pre">inkplugin</span></code></p></li>
+<li><p>Create INK Plugin project using <code class="docutils literal notranslate"><span class="pre">inkplugin</span> <span class="pre">create</span> <span class="pre">&lt;your-project-name&gt;</span></code></p></li>
+<li><p>Start writing your plugin code in the <code class="docutils literal notranslate"><span class="pre">main.js</span></code> using INK <a class="reference external" href="/api">APIs</a>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Under <code class="docutils literal notranslate"><span class="pre">engines</span></code> section in <code class="docutils literal notranslate"><span class="pre">package.json</span></code>, cli tool will automatically add the latest version for INK Editor support. you can change it as per your needs.</p>
+</div>
+<p>In its simplest form, the plugin main entry JS file looks like this.</p>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">IO</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">Editor</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
+
+  <span class="c1">//your code here</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello, INK Plugin World!&quot;</span><span class="p">);</span>
+
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+<p>We use importScript to import INKAPI because each ink plugin runs inside a separate worker.</p>
+<p>In the above example, we are importing <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> that will provide us with INKAPI globally and making use of its ready function, we can initiate our plugin code once the INK APIs are ready to use. Also you can see some api namespaces that are available through INKAPI.</p>
+<div class="section" id="add-menu-item">
+<h2>Add Menu Item<a class="headerlink" href="#add-menu-item" title="Permalink to this headline">¶</a></h2>
+<p>Let’s try to add a menu item in INK using the <code class="docutils literal notranslate"><span class="pre">UI</span></code> API Namespace.</p>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="c1">//your code here</span>
+  <span class="nx">UI</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">addMenuItem</span><span class="p">(</span><span class="nx">clickHandler</span><span class="p">,</span> <span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;Export&quot;</span><span class="p">,</span> <span class="s2">&quot;as Demo HTML&quot;</span><span class="p">);</span>
+
+<span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">clickHandler</span><span class="p">(){</span>
+  <span class="c1">//do something on menu click</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>In above code we have added a menu item in the INK export menu and also it’s click handler is bind with the callback function.</p>
+<p>Now, let’s try to retrieve the INK editor content and save it to user disk in html format.</p>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="c1">//your code here</span>
+  <span class="nx">UI</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">addMenuItem</span><span class="p">(</span><span class="nx">clickHandler</span><span class="p">,</span> <span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;Export&quot;</span><span class="p">,</span> <span class="s2">&quot;as Demo HTML&quot;</span><span class="p">);</span>
+
+<span class="p">});</span>
+
+<span class="nx">async</span> <span class="kd">function</span> <span class="nx">clickHandler</span><span class="p">(){</span>
+
+  <span class="c1">//do something on menu click</span>
+  <span class="kr">const</span> <span class="nx">Editor</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">IO</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
+
+  <span class="kr">const</span> <span class="nx">htmlString</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Editor</span><span class="p">.</span><span class="nx">getHTML</span><span class="p">();</span> <span class="c1">//retrieve editor content in html format.</span>
+
+  <span class="nx">IO</span><span class="p">.</span><span class="nx">saveFile</span><span class="p">(</span><span class="nx">htmlString</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">);</span>  <span class="c1">//open save dialog with only html file extension</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Our html export plugin is ready for use, yes that’s all it takes. Now we will need to package our plugin project for distribution.</p>
+</div>
+<div class="section" id="packaging-plugin">
+<h2>Packaging Plugin<a class="headerlink" href="#packaging-plugin" title="Permalink to this headline">¶</a></h2>
+<p>To package our plugin project we will use INK CLI <code class="docutils literal notranslate"><span class="pre">inkplugin</span> <span class="pre">package</span></code> command in our project root directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inkplugin</span> <span class="n">package</span>
+</pre></div>
+</div>
+<p>This command will create a packaged plugin file which is also know as <code class="docutils literal notranslate"><span class="pre">Dye</span></code> file. This file will be used for installing your plugin into INK editor.</p>
+</div>
+<div class="section" id="plugin-installation">
+<h2>Plugin Installation<a class="headerlink" href="#plugin-installation" title="Permalink to this headline">¶</a></h2>
+<p>Installing a plugin <code class="docutils literal notranslate"><span class="pre">Dye</span></code> file in editor is very simple. You can basically drag and drop your Dye file in INK Editor and it will prompt you for confirmation, just click on “Install Now” and you are all done. You can also manually go into plugin sidebar on the left side of the editor and click on the “Add Plugin” option. It will open up a dialog box and you can select your Dye file.</p>
+<p>After Installation you can go ahead and check if your plugin has created the <code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">Demo</span> <span class="pre">HTML</span></code> entry in the export menu and also try to export some content.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>More on INK API Namespaces in <a class="reference external" href="/api">APIs</a> section.</p></li>
+<li><p>More on INK CLI Tool in <a class="reference external" href="/cli">Command</a> <a class="reference external" href="/cli">Line Tools</a> section.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="packageJsonFile.html" class="btn btn-neutral float-right" title="Package JSON File" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="demoPlugins.html" class="btn btn-neutral float-left" title="Demo plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, EDGY Labs.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -13,6 +13,8 @@ Welcome to INK API's documentation!
 	:caption: Getting Started:
 	
 	getting-started/index
+	getting-started/demoPlugins
+	getting-started/quickStart
 	getting-started/packageJsonFile
    
 .. toctree::
