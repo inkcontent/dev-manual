@@ -7,6 +7,11 @@ With plugins you can greatly extend and expand the functionality of the INK Edit
 
 We designed our plugin architecture with developers in mind. You can make a fully functioning plugin in minutes, using vanilla JavaScript and our handy command line tools.
 
+.. raw:: html
 
+  <script src="//fast.wistia.com/embed/medias/uv7uu9ugrq.jsonp" async></script>
+  <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+  <div class="wistia_embed wistia_async_uv7uu9ugrq" style="height:397px;width:100%">&nbsp;</div>
+  <br><br>
 
 .. _here: ./demoPlugins.html
