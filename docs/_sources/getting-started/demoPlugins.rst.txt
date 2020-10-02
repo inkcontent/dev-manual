@@ -5,8 +5,8 @@ Export plugins
 --------------
 
  
- * `Docxporter <#>`_ - exports INK file to MS Word Docx format. 
-
+ * `Docxporter <https://github.com/inkcontent/docxporter>`_ - exports INK file to MS Word Docx format. - `Download <https://github.com/inkcontent/docxporter/raw/master/dist/docxporter.dye>`_
+ 
 
 Did you create a cool plugin you want us to add to this list? Email `aladdin@edgylabs.com <mailto:aladdin@edgylabs.com>`_
 
