@@ -1,9 +1,9 @@
-INK APIs Introduction
-=====================
+INK APIs Intro
+==============
 
-INK Editor provides some functions from its core for plugin developers to use, allowing plugins to interact with INK Editor core safely and making interactions possible. These functions are divided into namespaces according to their functionalities and all of them combines to form INK APIs. 
+The INK Editor provides some of its core functions for developers to use. This makes it possible for plugins to safely interact with the INK Editor’s core. These functions are divided into namespaces according to their functionalities. All of these functions combine to form the INK APIs. 
 
-INK APIs are available for every plugin through ``inkapi.js`` file, which is mandatory file for plugin project.
+INK APIs are available through ``inkapi.js`` for every plugin. This file is mandatory for plugin projects.
 
 .. note::
 

@@ -6,17 +6,17 @@ Quick Start
    <iframe width="100%" height="392" src="https://www.youtube.com/embed/PXwtQPNyGLU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    <br><br>
 
-To quickly get started creating INK plugins, follow the steps below.
+Quickly get started creating your own INK plugins by following these easy steps.
 
-#. Install INK CLI tool ``inkplugin`` globally using ``npm install -g inkplugin``
-#. Create INK Plugin project using ``inkplugin create <your-project-name>``
-#. Start writing your plugin code in the ``main.js`` using INK APIs_.
+#. Install the INK CLI tool ``inkplugin`` globally using ``npm install -g inkplugin``
+#. Create an INK Plug-in project using ``inkplugin create <your-project-name>``
+#. Start writing your plug-in code in this ``main.js`` using our INK APIs_.
 
 .. note:: 
 
-    Under ``engines`` section in ``package.json``, cli tool will automatically add the latest version for INK Editor support. you can change it as per your needs.
+    Under the ``engines`` section in ``package.json``, the CLI tool will automatically add the latest version of the INK Editor Support. Feel free to change this according to your need.
 
-In its simplest form, the plugin main entry JS file looks like this.
+In its simplest form, the plug-in main entry JS file looks like this:
 
 .. code-block:: javascript
     :linenos:
@@ -34,15 +34,17 @@ In its simplest form, the plugin main entry JS file looks like this.
 
     });
 
-We use importScript to import INKAPI because each ink plugin runs inside a separate worker.
+.. note::
 
-In the above example, we are importing ``inkapi.js`` that will provide us with INKAPI globally and making use of its ready function, we can initiate our plugin code once the INK APIs are ready to use. Also you can see some api namespaces that are available through INKAPI. 
+   Because each INK plug-in runs inside a separate worker, we use importScript to import INK APIs.
+
+In the above example, you’ll notice that we import ``inkapi.js`` in order to provide the INK API globally. Once the INK API is ready to use, you can take advantage of its ready function to initiate the plug-in code. Additionally, you’ll also notice some API namespaces that are available through the INK API.
 
 
-Add Menu Item
-+++++++++++++
+How to Add a Menu Item
+++++++++++++++++++++++
 
-Let's try to add a menu item in INK using the ``UI`` API Namespace.
+Now, let’s add a menu item in the INK application using the ``UI`` API Namespace:
 
 .. code-block:: javascript
     :linenos:
@@ -61,9 +63,9 @@ Let's try to add a menu item in INK using the ``UI`` API Namespace.
       //do something on menu click
     }
 
-In above code we have added a menu item in the INK export menu and also it's click handler is bind with the callback function.
+The above code adds a menu item inside the INK export menu. It also binds the menu option’s click handler with the callback function.
 
-Now, let's try to retrieve the INK editor content and save it to user disk in html format.
+Next, let’s retrieve the INK Editor content and save it to disk as HTML:
 
 .. code-block:: javascript
     :linenos:
@@ -91,12 +93,12 @@ Now, let's try to retrieve the INK editor content and save it to user disk in ht
     }
 
 
-Our html export plugin is ready for use, yes that's all it takes. Now we will need to package our plugin project for distribution.
+And just like that, our HTML export plug-in is ready to use! (simple, right?) At this point, it’s time to package the plug-in for distribution so that others can enjoy it as well.
 
-Packaging Plugin
-++++++++++++++++
+How to Package Your Plug-in
++++++++++++++++++++++++++++
 
-To package our plugin project we will use INK CLI ``inkplugin package`` command in our project root directory. 
+To package your plug-in, use the INK CLI ``inkplugin package`` command in our project root directory:
 
 .. code::
 
@@ -105,19 +107,19 @@ To package our plugin project we will use INK CLI ``inkplugin package`` command 
 This command will create a packaged plugin file which is also know as ``Dye`` file. This file will be used for installing your plugin into INK editor.
 
 
-Plugin Installation
-+++++++++++++++++++
+How to Install Your Plug-in
++++++++++++++++++++++++++++
 
-Installing a plugin ``Dye`` file in editor is very simple. You can basically drag and drop your Dye file in INK Editor and it will prompt you for confirmation, just click on "Install Now" and you are all done. You can also manually go into plugin sidebar on the left side of the editor and click on the "Add Plugin" option. It will open up a dialog box and you can select your Dye file.
+It’s super easy to install a plug-in ``Dye`` file in the INK Editor. Just drag and drop your Dye file into the INK Editor. Then, INK will prompt you to confirm. When this happens, click on “Install Now” and you’re done! 
 
-After Installation you can go ahead and check if your plugin has created the ``as Demo HTML`` entry in the export menu and also try to export some content. 
+Alternatively, you can manually install your plug-in by opening the Plug-in Sidebar on the left side of the editor. Then, click on the “Add Plugin” option. This will open up a dialog box where you can select your Dye file.
 
+After completing the plug-in installation, check that your plug-in created the ``as Demo HTML`` entry in the export menu and try to export some content.
 
 .. note::
 
-    - More on INK API Namespaces in APIs_ section.
-    - More on INK CLI Tool in Command_ `Line Tools`__ section.
-
+    - More in INK API Namescapes under the APIs_ section.
+    - More on the INK CLI Tool under the Command_ `Line Tools`__ section.
 
 .. _Command: /cli
 

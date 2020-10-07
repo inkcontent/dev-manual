@@ -87,9 +87,9 @@
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/demoPlugins.html">Demo plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demoPlugins.html">Demo Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/quickStart.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package JSON File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package File</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Command line tools:</span></p>
 <ul>
@@ -98,7 +98,7 @@
 </ul>
 <p class="caption"><span class="caption-text">APIs:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced:</span></p>
@@ -171,13 +171,13 @@
             
   <div class="section" id="plugin-workers">
 <h1>Plugin Workers<a class="headerlink" href="#plugin-workers" title="Permalink to this headline">¶</a></h1>
-<p>Each plugin in INK runs on a separate worker using <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>. This helps INK to keep each plugin execution environment separate and avoid any sort of collisions.</p>
-<p>INK allows plugins to run on either <code class="docutils literal notranslate"><span class="pre">Standard</span> <span class="pre">Worker</span></code> or <code class="docutils literal notranslate"><span class="pre">Module</span> <span class="pre">Worker</span></code>. The module workers provides the ability to use the JavaScript <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to import other modules; strict mode by default; and top-level declarations not polluting the worker’s global scope.</p>
-<p>You can simply choose to execute your plugin in module worker by using <code class="docutils literal notranslate"><span class="pre">--module-worker</span></code> flag while creating your plugin project.</p>
+<p>Each INK plugin runs on a separate worker using <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>. This helps the INK application avoid any collisions or issues by keeping each plugin execution environment separate.</p>
+<p>The INK software allows plugins to run on either <code class="docutils literal notranslate"><span class="pre">Standard</span> <span class="pre">Worker</span></code> or <code class="docutils literal notranslate"><span class="pre">Module</span> <span class="pre">Worker</span></code>. Module Workers provide the ability to use the JavaScript <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to import other modules. This sets Strict Mode as the default. Finally, it allows for top level declarations without polluting the worker’s global scope.</p>
+<p>To easily execute your plugin with Module Worker , use the ______ flag while creating your plugin project.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inkplugin</span> <span class="n">create</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">module</span><span class="o">-</span><span class="n">worker</span>
 </pre></div>
 </div>
-<p>This will create a <code class="docutils literal notranslate"><span class="pre">module</span></code> field with <cite>true</cite> value under <code class="docutils literal notranslate"><span class="pre">inkplugin</span></code> section in your package.json file indicating that your plugin will support ES6 modules and will be loaded in module worker.</p>
+<p>If you choose this method, this action will create a <code class="docutils literal notranslate"><span class="pre">module</span></code> field with a <cite>true</cite> value under the <code class="docutils literal notranslate"><span class="pre">inkplugin</span></code> section in your <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file. This indicates that your plugin will support ES6 modules and will be loaded in the Module Worker.</p>
 </div>
 
 

@@ -1,10 +1,9 @@
 INK CLI Intro
 =============
 
-INK CLI ``inkplugin`` is a command line interface for INK plugin developers, to assist them in plugin development tasks including:
+INK CLI ``inkplugin`` is a command line interface designed to help you with development tasks like:
 
-#. Creating Starter Plugin Project
-#. Packaging Plugin Project
+#. Creating a Starter Plugin project
+#. Packaging a Plugin project
 
-It provides an easy and quick way to start developing your plugin and once you are done you can package your plugin for distribution.
-
+First, it provides a quick and easy way to start developing your own plugin. Once you’re finished developing, this interface helps you easily package your plugin for distribution.

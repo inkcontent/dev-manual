@@ -2,31 +2,31 @@ INK CLI Usage
 =============
 
 
-Installation:
-+++++++++++++++++++
+Installing the INK CLI:
++++++++++++++++++++++++
 
-using npm
+Install the INK CLI using npm:
 
 .. code::
 
   >  npm install -g inkplugin 
 
-or using yarn
+Or, using yarn:
 
 .. code::
 
   >  yarn global add inkplugin 
 
-Create INK plugin project: 
-++++++++++++++++++++++++++++
+Creating Your INK Plugin Project: 
++++++++++++++++++++++++++++++++++
 
-To create INK plugin project you can simply use ``create`` command with the name (or path) for the plugin project.
+To start creating your INK plugin project, simply use the ``create`` command with the name (or path) for the given plugin project:
 
 .. code::
 
   >  inkplugin create <Path or Project Name>
 
-The above command will create a following project structure.
+The above command will create the following project structure:
 
 .. code::
 
@@ -37,32 +37,32 @@ The above command will create a following project structure.
      ├── readme.md
      ├── sample.png
 
-You can also enable ES6 modules support for your plugin by using ``--module-worker`` flag while creating the project. More information about module workers here_.
+Furthermore, you can also enable ES6 Modules support for your plugin by using the ``--module-worker`` flag when you create the project. Learn more about this method and using Module Workers here_. 
 
 .. warning::
 
-    It is mandatory to always keep ``inkapi.js`` in root directory of your project. ``inkapi`` ensures the right communication between the plugin context and INK editor context. While plugin installation, INK editor expects the ``inkapi.js`` to be present in the root directory of your project.
+    It’s mandatory to always keep ``inkapi.js`` in the root directory of your plugin project. This is because ``inkapi.js`` ensures that the plugin context and the INK Editor context communicate correctly with one another, avoiding any conflicts or errors. As a result, the INK Editor software expects the ``inkapi.js`` to be present in the root directory of your plugin project. 
 
-Package INK plugin project: 
-+++++++++++++++++++++++++++
+Packaging Your INK Plugin Project: 
+++++++++++++++++++++++++++++++++++
 
-To package INK plugin you can use ``package`` command with the path to the project directory.
+To package your INK plugin, use the ``package`` command and set the path to the project directory as follows: 
 
 .. code::
 
   >  inkplugin package <Project Path>
 
-It will package current directory ``./``, if no path is provided.
+The above command will create a packaged plugin file in the project root directory. You can use this packaged file to install your plugin in the INK Editor.
 
-The above command will create a packaged plugin file in project root directory. which can be used to install your plugin in INK editor.
+If no path is provided, it’s important to note that this will package the current directory ``./``.
 
 .. note::
 
-    Before packaging, make sure your project meets the following requirements.
+    Before packaging, make sure your plugin project meets the following requirements:
 
-    * Project root directory must contain a package.json file.
-    * Project root directory must contain a inkapi.js file.
-    * package.json ``main`` field should point towards the entry js file.
+    * Project root directory must contain a ``package.json`` file.
+    * Project root directory must contain an ``inkapi.js`` file.
+    * Package.json ``main`` field points toward the entry js file.
 
 
 .. _here: ../advanced/plugin-workers.html

@@ -1,7 +1,7 @@
-Package JSON File
-=================
+Package File
+============
 
-The ``package.json`` file is one of the most important file in the plugin project as it contains some important information regarding your plugin. A typical INK plugin ``package.json`` file looks like this.
+The ``package.json`` file is one of the most important files for your plugin project. This is because it contains important information about your plugin. For example, a typical INK plugin ``package.json`` file looks like this:
 
 .. code:: json
 
@@ -27,8 +27,8 @@ The ``package.json`` file is one of the most important file in the plugin projec
     }
   }
 
-You can see in the above package.json file we make use of a lot of standard package json fields and some custom fields that are essential for INK plugin. It is important that you fill all of the fields, except ``id`` field (it is prohibited), so that INK editor can present your plugin perfectly.
+As you can see, the above ``package.json`` file uses many standard package JSON fields as well as some custom fields that are essential for INK plugins. To ensure the INK Editor presents your plugin perfectly, it’s extremely important that you fill out all of the fields EXCEPT the ``id`` field (this action is prohibited).
 
 .. warning::
 
-  It is prohibited to modify the ``id`` field in ``inkplugin`` section of your package.json file. This field uniquely identifies your plugin and it is used in operations like updating/activating/deactivating plugin.
+  Modifying the ``id`` field in the ``inkplugin`` section of your ``package.json`` file is prohibited. This is because this field uniquely identifies your plugin and is used for operations like updating, activating, and deactivating the plugin. 

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Package JSON File &mdash; INK API 2.0 documentation</title>
+  <title>Package File &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -88,9 +88,9 @@
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demoPlugins.html">Demo plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoPlugins.html">Demo Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickStart.html">Quick Start</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Package JSON File</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Package File</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Command line tools:</span></p>
 <ul>
@@ -99,7 +99,7 @@
 </ul>
 <p class="caption"><span class="caption-text">APIs:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced:</span></p>
@@ -151,7 +151,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Package JSON File</li>
+      <li>Package File</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,9 +170,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="package-json-file">
-<h1>Package JSON File<a class="headerlink" href="#package-json-file" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file is one of the most important file in the plugin project as it contains some important information regarding your plugin. A typical INK plugin <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file looks like this.</p>
+  <div class="section" id="package-file">
+<h1>Package File<a class="headerlink" href="#package-file" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file is one of the most important files for your plugin project. This is because it contains important information about your plugin. For example, a typical INK plugin <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file looks like this:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;plugin-project-name&quot;</span><span class="p">,</span>
   <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1.0&quot;</span><span class="p">,</span>
@@ -196,10 +196,10 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>You can see in the above package.json file we make use of a lot of standard package json fields and some custom fields that are essential for INK plugin. It is important that you fill all of the fields, except <code class="docutils literal notranslate"><span class="pre">id</span></code> field (it is prohibited), so that INK editor can present your plugin perfectly.</p>
+<p>As you can see, the above <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file uses many standard package JSON fields as well as some custom fields that are essential for INK plugins. To ensure the INK Editor presents your plugin perfectly, it’s extremely important that you fill out all of the fields EXCEPT the <code class="docutils literal notranslate"><span class="pre">id</span></code> field (this action is prohibited).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is prohibited to modify the <code class="docutils literal notranslate"><span class="pre">id</span></code> field in <code class="docutils literal notranslate"><span class="pre">inkplugin</span></code> section of your package.json file. This field uniquely identifies your plugin and it is used in operations like updating/activating/deactivating plugin.</p>
+<p>Modifying the <code class="docutils literal notranslate"><span class="pre">id</span></code> field in the <code class="docutils literal notranslate"><span class="pre">inkplugin</span></code> section of your <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file is prohibited. This is because this field uniquely identifies your plugin and is used for operations like updating, activating, and deactivating the plugin.</p>
 </div>
 </div>
 

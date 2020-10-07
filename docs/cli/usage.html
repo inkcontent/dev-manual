@@ -39,7 +39,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="INK APIs Introduction" href="../api/index.html" />
+    <link rel="next" title="INK APIs Intro" href="../api/index.html" />
     <link rel="prev" title="INK CLI Intro" href="index.html" /> 
 </head>
 
@@ -88,23 +88,23 @@
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/demoPlugins.html">Demo plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demoPlugins.html">Demo Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/quickStart.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package JSON File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package File</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Command line tools:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">INK CLI Intro</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">INK CLI Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-ink-plugin-project">Create INK plugin project:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#package-ink-plugin-project">Package INK plugin project:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-ink-cli">Installing the INK CLI:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-your-ink-plugin-project">Creating Your INK Plugin Project:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packaging-your-ink-plugin-project">Packaging Your INK Plugin Project:</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">APIs:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced:</span></p>
@@ -177,24 +177,24 @@
             
   <div class="section" id="ink-cli-usage">
 <h1>INK CLI Usage<a class="headerlink" href="#ink-cli-usage" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="installation">
-<h2>Installation:<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>using npm</p>
+<div class="section" id="installing-the-ink-cli">
+<h2>Installing the INK CLI:<a class="headerlink" href="#installing-the-ink-cli" title="Permalink to this headline">¶</a></h2>
+<p>Install the INK CLI using npm:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">inkplugin</span>
 </pre></div>
 </div>
-<p>or using yarn</p>
+<p>Or, using yarn:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">yarn</span> <span class="k">global</span> <span class="n">add</span> <span class="n">inkplugin</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="create-ink-plugin-project">
-<h2>Create INK plugin project:<a class="headerlink" href="#create-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
-<p>To create INK plugin project you can simply use <code class="docutils literal notranslate"><span class="pre">create</span></code> command with the name (or path) for the plugin project.</p>
+<div class="section" id="creating-your-ink-plugin-project">
+<h2>Creating Your INK Plugin Project:<a class="headerlink" href="#creating-your-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
+<p>To start creating your INK plugin project, simply use the <code class="docutils literal notranslate"><span class="pre">create</span></code> command with the name (or path) for the given plugin project:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">create</span> <span class="o">&lt;</span><span class="n">Path</span> <span class="ow">or</span> <span class="n">Project</span> <span class="n">Name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>The above command will create a following project structure.</p>
+<p>The above command will create the following project structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── ink-plugin
    ├── inkapi.js
    ├── main.js
@@ -203,27 +203,27 @@
    ├── sample.png
 </pre></div>
 </div>
-<p>You can also enable ES6 modules support for your plugin by using <code class="docutils literal notranslate"><span class="pre">--module-worker</span></code> flag while creating the project. More information about module workers <a class="reference external" href="../advanced/plugin-workers.html">here</a>.</p>
+<p>Furthermore, you can also enable ES6 Modules support for your plugin by using the <code class="docutils literal notranslate"><span class="pre">--module-worker</span></code> flag when you create the project. Learn more about this method and using Module Workers <a class="reference external" href="../advanced/plugin-workers.html">here</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is mandatory to always keep <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> in root directory of your project. <code class="docutils literal notranslate"><span class="pre">inkapi</span></code> ensures the right communication between the plugin context and INK editor context. While plugin installation, INK editor expects the <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> to be present in the root directory of your project.</p>
+<p>It’s mandatory to always keep <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> in the root directory of your plugin project. This is because <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> ensures that the plugin context and the INK Editor context communicate correctly with one another, avoiding any conflicts or errors. As a result, the INK Editor software expects the <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> to be present in the root directory of your plugin project.</p>
 </div>
 </div>
-<div class="section" id="package-ink-plugin-project">
-<h2>Package INK plugin project:<a class="headerlink" href="#package-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
-<p>To package INK plugin you can use <code class="docutils literal notranslate"><span class="pre">package</span></code> command with the path to the project directory.</p>
+<div class="section" id="packaging-your-ink-plugin-project">
+<h2>Packaging Your INK Plugin Project:<a class="headerlink" href="#packaging-your-ink-plugin-project" title="Permalink to this headline">¶</a></h2>
+<p>To package your INK plugin, use the <code class="docutils literal notranslate"><span class="pre">package</span></code> command and set the path to the project directory as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>  <span class="n">inkplugin</span> <span class="n">package</span> <span class="o">&lt;</span><span class="n">Project</span> <span class="n">Path</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>It will package current directory <code class="docutils literal notranslate"><span class="pre">./</span></code>, if no path is provided.</p>
-<p>The above command will create a packaged plugin file in project root directory. which can be used to install your plugin in INK editor.</p>
+<p>The above command will create a packaged plugin file in the project root directory. You can use this packaged file to install your plugin in the INK Editor.</p>
+<p>If no path is provided, it’s important to note that this will package the current directory <code class="docutils literal notranslate"><span class="pre">./</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Before packaging, make sure your project meets the following requirements.</p>
+<p>Before packaging, make sure your plugin project meets the following requirements:</p>
 <ul class="simple">
-<li><p>Project root directory must contain a package.json file.</p></li>
-<li><p>Project root directory must contain a inkapi.js file.</p></li>
-<li><p>package.json <code class="docutils literal notranslate"><span class="pre">main</span></code> field should point towards the entry js file.</p></li>
+<li><p>Project root directory must contain a <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file.</p></li>
+<li><p>Project root directory must contain an <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> file.</p></li>
+<li><p>Package.json <code class="docutils literal notranslate"><span class="pre">main</span></code> field points toward the entry js file.</p></li>
 </ul>
 </div>
 </div>
@@ -237,7 +237,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../api/index.html" class="btn btn-neutral float-right" title="INK APIs Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../api/index.html" class="btn btn-neutral float-right" title="INK APIs Intro" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="INK CLI Intro" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
