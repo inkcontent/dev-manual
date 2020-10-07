@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>INK APIs Intro &mdash; INK API 2.0 documentation</title>
+  <title>Debug Window &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -39,8 +39,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Namespaces" href="namespaces.html" />
-    <link rel="prev" title="INK CLI Usage" href="../cli/usage.html" /> 
+    <link rel="prev" title="Plugin Workers" href="plugin-workers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,14 +97,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../cli/usage.html">INK CLI Usage</a></li>
 </ul>
 <p class="caption"><span class="caption-text">APIs:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">INK APIs Intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="namespaces.html">API Namespaces</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/plugin-workers.html">Plugin Workers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/debug-window.html">Debug Window</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plugin-workers.html">Plugin Workers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Debug Window</a></li>
 </ul>
 
             
@@ -152,13 +151,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>INK APIs Intro</li>
+      <li>Debug Window</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/api/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/advanced/debug-window.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,13 +170,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ink-apis-intro">
-<h1>INK APIs Intro<a class="headerlink" href="#ink-apis-intro" title="Permalink to this headline">¶</a></h1>
-<p>The INK Editor provides some of its core functions for developers to use. This makes it possible for plugins to safely interact with the INK Editor’s core. These functions are divided into namespaces according to their functionalities. All of these functions combine to form the INK APIs.</p>
-<p>INK APIs are available through <code class="docutils literal notranslate"><span class="pre">inkapi.js</span></code> for every plugin. This file is mandatory for plugin projects.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Each INK API function will return a promise with a resultant value (if applicable).</p>
+  <div class="section" id="debug-window">
+<h1>Debug Window<a class="headerlink" href="#debug-window" title="Permalink to this headline">¶</a></h1>
+<p>Debug Window is helpful for reading console logs from your plugin or to debug the plugin errors. To enable and display the debug window, you will have to launch the INK Application from terminal with some flags as follow:</p>
+<p>For Mac Users:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="nb">open</span> <span class="o">&lt;</span><span class="n">PATH</span> <span class="n">TO</span> <span class="n">INK</span><span class="o">.</span><span class="n">app</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">args</span> <span class="o">--</span><span class="n">debug</span><span class="o">-</span><span class="n">plugins</span>
+
+<span class="k">for</span> <span class="n">eg</span><span class="o">.</span>
+
+<span class="o">&gt;</span> <span class="nb">open</span> <span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="n">INK</span><span class="o">.</span><span class="n">app</span> <span class="o">--</span><span class="n">args</span> <span class="o">--</span><span class="n">debug</span><span class="o">-</span><span class="n">plugins</span>
+</pre></div>
+</div>
+<p>For Windows Users:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">PATH</span> <span class="n">TO</span> <span class="n">INK</span><span class="o">.</span><span class="n">exe</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">debug</span><span class="o">-</span><span class="n">plugins</span>
+
+<span class="k">for</span> <span class="n">eg</span><span class="o">.</span>
+
+<span class="o">&gt;</span> <span class="s2">&quot;C:\Program Files (x86)\INK\INK.exe&quot;</span> <span class="o">--</span><span class="n">debug</span><span class="o">-</span><span class="n">plugins</span>
+</pre></div>
+</div>
+<p>For Linux Users:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Path</span> <span class="n">to</span> <span class="n">INK</span> <span class="n">Executable</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">debug</span><span class="o">-</span><span class="n">plugins</span>
+
+<span class="k">for</span> <span class="n">eg</span><span class="o">.</span>
+
+<span class="o">&gt;</span> <span class="o">./</span><span class="n">INK</span><span class="o">.</span><span class="n">AppImage</span> <span class="o">--</span><span class="n">debug</span><span class="o">-</span><span class="n">plugins</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not close the <cite>Debug Window</cite> directly, instead exit the INK application and reopen normally. Closing the <cite>Debug Window</cite> will terminate all the plugin workers and all the plugin operations will shutdown.</p>
 </div>
 </div>
 
@@ -189,10 +211,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="namespaces.html" class="btn btn-neutral float-right" title="API Namespaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="../cli/usage.html" class="btn btn-neutral float-left" title="INK CLI Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plugin-workers.html" class="btn btn-neutral float-left" title="Plugin Workers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -36,5 +36,6 @@ Welcome to INK API's documentation!
 	:caption: Advanced:
 	
 	advanced/plugin-workers
+	advanced/debug-window
 	
 
