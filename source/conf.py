@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = "INK API"
-copyright = "2020, EDGY Labs."
+copyright = "2020, INK Content, Inc."
 author = "Alaa-eddine K."
 
 # The full version, including alpha/beta/rc tags
