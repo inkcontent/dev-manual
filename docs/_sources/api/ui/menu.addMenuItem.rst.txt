@@ -29,10 +29,10 @@ addMenuItem API allows plugin to create a menu item in INK Editor.
 Parameters
 ++++++++++
 
-``Callback Trigger``: function
+Callback Trigger: ``function``
 
 First parameter will accept a callback function which will be trigger on menu item click.
 
-``Structure Path``: [ ]:String
+Structure Path: ``[ ]:String``
 
 All the parameters after first callback param will be string and will be a structure path to the menu item entry location.

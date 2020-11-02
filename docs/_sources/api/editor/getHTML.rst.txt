@@ -30,6 +30,6 @@ getHTML API extracts the content from the INK Editor and parse it into an HTML s
 Parameters
 ++++++++++
 
-``localImage``: Boolean
+localImage: ``Boolean``
 
 getHTML API provides html string with image src in base64 format, if passed ``true`` in parameter all images in html string will have local source url.

@@ -10,6 +10,7 @@ EDITOR ``INKAPI.editor``
 	:maxdepth: 1
 	
 	editor/getHTML
+	editor/getMD
 	editor/getText
    
 UI ``INKAPI.ui``
