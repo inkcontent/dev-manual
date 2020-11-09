@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>getText EDITOR &mdash; INK API 2.0 documentation</title>
+  <title>setNodeData EDITOR &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="on EDITOR" href="on.html" />
-    <link rel="prev" title="getMD EDITOR" href="getMD.html" /> 
+    <link rel="next" title="insertText EDITOR" href="insertText.html" />
+    <link rel="prev" title="setSelection EDITOR" href="setSelection.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,13 +104,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="getHTML.html">getHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getMD.html">getMD <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getText.html">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="setNodeData.html">setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">options</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="insertText.html">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadText.html">loadText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadHTML.html">loadHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
@@ -173,13 +177,13 @@
         
           <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
         
-      <li>getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></li>
+      <li>setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/editor/getText.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/editor/setNodeData.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,9 +196,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gettext-editor">
-<h1>getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#gettext-editor" title="Permalink to this headline">¶</a></h1>
-<p>getText API extracts the content from the INK Editor and parse it into plain text string as a resultant value.</p>
+  <div class="section" id="setnodedata-editor">
+<h1>setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#setnodedata-editor" title="Permalink to this headline">¶</a></h1>
+<p>setNodeData API can change meta data of any block in INK Editor.</p>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -209,29 +213,43 @@
 12
 13
 14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
   <span class="kr">const</span> <span class="nx">EDITOR</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
 
-  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">getText</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">text</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;my favorite cat&quot;</span><span class="p">,</span>
+    <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;This is a picture of my favorite cat&quot;</span><span class="p">,</span>
+    <span class="nx">alt</span><span class="o">:</span> <span class="s2">&quot;Cat Playing&quot;</span><span class="p">,</span>
+  <span class="p">};</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-
-  <span class="p">})</span>
-
-  <span class="c1">//Or use async/await</span>
-
-  <span class="kr">const</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">getText</span><span class="p">();</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">setNodeData</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="p">[</span><span class="mf">3</span><span class="p">]);</span>
 
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>options: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p>
+<p>path: <code class="docutils literal notranslate"><span class="pre">Array&lt;Number&gt;</span></code></p>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>file <code class="docutils literal notranslate"><span class="pre">String</span></code> : sets src url for the image node.</p>
+<p>type <code class="docutils literal notranslate"><span class="pre">String</span></code> : this option can change node type. Valid node types are: <code class="docutils literal notranslate"><span class="pre">heading-two</span></code>, <code class="docutils literal notranslate"><span class="pre">heading-three</span></code>, <code class="docutils literal notranslate"><span class="pre">heading-four</span></code>, <code class="docutils literal notranslate"><span class="pre">numbered-list</span></code>, <code class="docutils literal notranslate"><span class="pre">bulleted-list</span></code>, <code class="docutils literal notranslate"><span class="pre">list-item</span></code>, <code class="docutils literal notranslate"><span class="pre">paragraph</span></code>, <code class="docutils literal notranslate"><span class="pre">quote</span></code></p>
+<p>title <code class="docutils literal notranslate"><span class="pre">String</span></code> : sets title for the image node.</p>
+<p>caption <code class="docutils literal notranslate"><span class="pre">String</span></code> : sets caption text for the image node.</p>
+<p>alt <code class="docutils literal notranslate"><span class="pre">String</span></code> : sets alt text for the image node.</p>
+<p>size <code class="docutils literal notranslate"><span class="pre">Number</span></code> : sets image node size range between 20 - 100.</p>
+<p>quality <code class="docutils literal notranslate"><span class="pre">Number</span></code> : set image node quality range between 30 - 100.</p>
+<p>align <code class="docutils literal notranslate"><span class="pre">String</span></code> : Set alignment for the node. Valid alignments are: <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Learn more about how blocks work in INK editor <a href="#id1"><span class="problematic" id="id2">here_</span></a>.</p>
+</div>
+</div>
 </div>
 
 
@@ -242,10 +260,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="on.html" class="btn btn-neutral float-right" title="on EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="insertText.html" class="btn btn-neutral float-right" title="insertText EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="getMD.html" class="btn btn-neutral float-left" title="getMD EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="setSelection.html" class="btn btn-neutral float-left" title="setSelection EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

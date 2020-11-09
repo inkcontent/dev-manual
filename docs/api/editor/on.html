@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>getText EDITOR &mdash; INK API 2.0 documentation</title>
+  <title>on EDITOR &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="on EDITOR" href="on.html" />
-    <link rel="prev" title="getMD EDITOR" href="getMD.html" /> 
+    <link rel="next" title="off EDITOR" href="off.html" />
+    <link rel="prev" title="getText EDITOR" href="getText.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,8 +104,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="getHTML.html">getHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getMD.html">getMD <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getText.html">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#events">Events</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
@@ -173,13 +177,13 @@
         
           <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
         
-      <li>getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></li>
+      <li>on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/editor/getText.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/editor/on.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,9 +196,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gettext-editor">
-<h1>getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#gettext-editor" title="Permalink to this headline">¶</a></h1>
-<p>getText API extracts the content from the INK Editor and parse it into plain text string as a resultant value.</p>
+  <div class="section" id="on-editor">
+<h1>on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#on-editor" title="Permalink to this headline">¶</a></h1>
+<p><cite>on</cite> API is used to attach event handler for a specific event.</p>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -208,30 +212,32 @@
 11
 12
 13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
   <span class="kr">const</span> <span class="nx">EDITOR</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
 
-  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">getText</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">text</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">contentChangeHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">}</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-
-  <span class="p">})</span>
-
-  <span class="c1">//Or use async/await</span>
-
-  <span class="kr">const</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">getText</span><span class="p">();</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+  <span class="c1">//subscribing to an event with event handler</span>
+  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">contentChangeHandler</span><span class="p">,</span> <span class="s2">&quot;contentChange&quot;</span><span class="p">)</span>
 
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>eventHandler: <code class="docutils literal notranslate"><span class="pre">function</span></code></p>
+<p>eventName: <code class="docutils literal notranslate"><span class="pre">String</span></code></p>
+</div>
+<div class="section" id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
+<p>Following events are available for plugins to subscribe to;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;contentChange&quot;</span></code></p>
+</div>
 </div>
 
 
@@ -242,10 +248,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="on.html" class="btn btn-neutral float-right" title="on EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="off.html" class="btn btn-neutral float-right" title="off EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="getMD.html" class="btn btn-neutral float-left" title="getMD EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="getText.html" class="btn btn-neutral float-left" title="getText EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
