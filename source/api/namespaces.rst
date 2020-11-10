@@ -10,7 +10,17 @@ EDITOR ``INKAPI.editor``
 	:maxdepth: 1
 	
 	editor/getHTML
+	editor/getMD
 	editor/getText
+	editor/on
+	editor/off
+	editor/getAllBlocks
+	editor/getSelectedData
+	editor/setSelection
+	editor/setNodeData
+	editor/insertText
+	editor/loadText
+	editor/loadHTML
    
 UI ``INKAPI.ui``
 ++++++++++++++++
@@ -25,3 +35,5 @@ IO ``INKAPI.io``
 	:maxdepth: 1
 	
 	io/saveFile
+	io/openFile
+	io/associateFileType

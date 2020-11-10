@@ -23,10 +23,10 @@ saveFile API is used to write content on user disk. It opens a dialog box and pr
 Parameters
 ++++++++++
 
-``content``: String | ArrayBuffer
+content: ``String | ArrayBuffer``
 
 First parameter will accept content in the form of either ``String`` or an ``ArrayBuffer``.
 
-``Extension``: String
+Extension: ``String``
 
 Second parameter will accept the extension filter that you want for your file.

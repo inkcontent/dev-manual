@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>openFile IO &mdash; INK API 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/ink.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="associateFileType IO" href="associateFileType.html" />
+    <link rel="prev" title="saveFile IO" href="saveFile.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> INK API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/demoPlugins.html">Demo Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/quickStart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/packageJsonFile.html">Package File</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Command line tools:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">INK CLI Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/usage.html">INK CLI Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">APIs:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">INK APIs Intro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../namespaces.html">API Namespaces</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="saveFile.html">saveFile <code class="docutils literal notranslate"><span class="pre">IO</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">openFile <code class="docutils literal notranslate"><span class="pre">IO</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="associateFileType.html">associateFileType <code class="docutils literal notranslate"><span class="pre">IO</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/plugin-workers.html">Plugin Workers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/debug-window.html">Debug Window</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INK API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
+        
+      <li>openFile <code class="docutils literal notranslate"><span class="pre">IO</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/io/openFile.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="openfile-io">
+<h1>openFile <code class="docutils literal notranslate"><span class="pre">IO</span></code><a class="headerlink" href="#openfile-io" title="Permalink to this headline">¶</a></h1>
+<p>openFile API is used to open and read files content from user disk. It opens a dialog box and prompts user to select a file or multiple files to open.</p>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kr">const</span> <span class="nx">IO</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
+
+  <span class="c1">//open dialog with docx file extension</span>
+  <span class="nx">IO</span><span class="p">.</span><span class="nx">openFile</span><span class="p">({</span> <span class="nx">ext</span><span class="o">:</span> <span class="s2">&quot;docx&quot;</span><span class="p">,</span> <span class="nx">allowMultipleFiles</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">});</span>
+
+
+  <span class="c1">//Or use async/await</span>
+
+  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">IO</span><span class="p">.</span><span class="nx">openFile</span><span class="p">({</span> <span class="nx">ext</span><span class="o">:</span> <span class="s2">&quot;docx&quot;</span><span class="p">,</span> <span class="nx">allowMultipleFiles</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+
+
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>options: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">ext:</span> <span class="pre">String</span> <span class="pre">|</span> <span class="pre">Array&lt;String&gt;,</span> <span class="pre">allowMultipleFiles:</span> <span class="pre">Boolean</span> <span class="pre">}</span></code></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="associateFileType.html" class="btn btn-neutral float-right" title="associateFileType IO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="saveFile.html" class="btn btn-neutral float-left" title="saveFile IO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, INK Content, Inc.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
