@@ -1,5 +1,5 @@
 getAllBlocks ``EDITOR``
-==================
+=======================
 
 getAllBlocks API extracts the content from the INK Editor in the blocks format.
 
@@ -27,4 +27,4 @@ getAllBlocks API extracts the content from the INK Editor in the blocks format.
 
 .. note::
 
-   Learn more about how blocks work in INK editor here_.
+   Learn more about how blocks work in INK editor `here </advanced/INK-Editor-Blocks-Architecture.html>`_.

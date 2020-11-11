@@ -1,5 +1,5 @@
 setNodeData ``EDITOR``
-==========================
+======================
 
 setNodeData API can change meta data of any block in INK Editor.
 
@@ -53,4 +53,4 @@ align ``String`` : Set alignment for the node. Valid alignments are: ``left``, `
 
 .. note::
 
-   Learn more about how blocks work in INK editor here_.
+   Learn more about how blocks work in INK editor `here </advanced/INK-Editor-Blocks-Architecture.html>`_.
