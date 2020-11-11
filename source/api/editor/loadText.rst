@@ -27,4 +27,4 @@ path: ``Array<Number>``
 
 .. note::
 
-   Learn more about how blocks work in INK editor `here </advanced/INK-Editor-Blocks-Architecture.html>`_.
+   Learn more about how blocks work in INK editor `here <../../advanced/INK-Editor-Blocks-Architecture.html>`_.
