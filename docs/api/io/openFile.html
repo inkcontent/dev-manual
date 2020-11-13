@@ -202,37 +202,24 @@
 10
 11
 12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
-<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
   <span class="kr">const</span> <span class="nx">IO</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
 
-  <span class="c1">//open dialog with docx file extension</span>
-  <span class="nx">IO</span><span class="p">.</span><span class="nx">openFile</span><span class="p">({</span> <span class="nx">ext</span><span class="o">:</span> <span class="s2">&quot;docx&quot;</span><span class="p">,</span> <span class="nx">allowMultipleFiles</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-    <span class="p">});</span>
+  <span class="c1">//open dialog with txt file</span>
 
+  <span class="kr">const</span> <span class="nx">callback</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 
-  <span class="c1">//Or use async/await</span>
-
-  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">IO</span><span class="p">.</span><span class="nx">openFile</span><span class="p">({</span> <span class="nx">ext</span><span class="o">:</span> <span class="s2">&quot;docx&quot;</span><span class="p">,</span> <span class="nx">allowMultipleFiles</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-
+  <span class="nx">IO</span><span class="p">.</span><span class="nx">openFile</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="p">{</span> <span class="nx">ext</span><span class="o">:</span> <span class="s2">&quot;txt&quot;</span><span class="p">,</span> <span class="nx">allowMultipleFiles</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>
 
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>callback: <code class="docutils literal notranslate"><span class="pre">function</span></code></p>
 <p>options: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">ext:</span> <span class="pre">String</span> <span class="pre">|</span> <span class="pre">Array&lt;String&gt;,</span> <span class="pre">allowMultipleFiles:</span> <span class="pre">Boolean</span> <span class="pre">}</span></code></p>
 </div>
 </div>
