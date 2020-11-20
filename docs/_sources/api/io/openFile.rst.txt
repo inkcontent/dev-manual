@@ -9,27 +9,22 @@ openFile API is used to open and read files content from user disk. It opens a d
 
     import INKAPI from './inkapi.js'
 
-    INKAPI.ready(async () => {
+    INKAPI.ready(() => {
 
       const IO = INKAPI.io;
 
-      //open dialog with docx file extension
-      IO.openFile({ ext: "docx", allowMultipleFiles: false })
-        .then((data) => {
-          console.log(data);
-        });
-      
+      //open dialog with txt file
 
-      //Or use async/await
+      const callback = (data) => console.log(data);
 
-      const data = await IO.openFile({ ext: "docx", allowMultipleFiles: false });
-      console.log(data);
-
+      IO.openFile(callback, { ext: "txt", allowMultipleFiles: false })      
 
     });
 
 
 Parameters
 ++++++++++
+
+callback: ``function``
 
 options: ``{ ext: String | Array<String>, allowMultipleFiles: Boolean }``

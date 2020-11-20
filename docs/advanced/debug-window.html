@@ -105,7 +105,14 @@
 <p class="caption"><span class="caption-text">Advanced:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="plugin-workers.html">Plugin Workers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Debug Window</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Debug Window</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use">How To Use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#console-tab">Console Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-tab">Source Tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
 </ul>
 
@@ -202,6 +209,24 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not close the <cite>Debug Window</cite> directly, instead exit the INK application and reopen normally. Closing the <cite>Debug Window</cite> will terminate all the plugin workers and all the plugin operations will shutdown.</p>
+</div>
+<div class="section" id="how-to-use">
+<h2>How To Use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
+<p>In debug window there are multiple functionalities available to debug your plugin. You can navigate through them using tabs on the top bar of Devtools.</p>
+<div class="section" id="console-tab">
+<h3>Console Tab<a class="headerlink" href="#console-tab" title="Permalink to this headline">¶</a></h3>
+<p>Following is a console tab in Debug Window Devtools</p>
+<img alt="Console tab in debug window" src="../_images/debugWin1.png" />
+<p>Console tab is useful for reading logs from your plugin. You can also run JavaScript commands directly in the console tab.</p>
+<p>Each plugin in INK Editor runs in its own context and to run a command in your plugin context or to access INK APIs directly in console. You will need to switch the JavaScript Context from the dropdown below.</p>
+<img alt="JavaScript Contexts Dropdown" src="../_images/debugWin2.png" />
+<p>All the plugins contexts are listed here. To find the correct context of your plugin, check the name of plugin after first hash <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol.</p>
+</div>
+<div class="section" id="source-tab">
+<h3>Source Tab<a class="headerlink" href="#source-tab" title="Permalink to this headline">¶</a></h3>
+<p>You can find your plugin source files in Source tab of Debug Window. Here you can control and debug the program flow by implementing breakpoints and analyze program execution step by step.</p>
+<img alt="Source tab in debug window" src="../_images/debugWin3.png" />
+</div>
 </div>
 </div>
 
