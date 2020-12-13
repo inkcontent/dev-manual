@@ -3,6 +3,15 @@ off ``EDITOR``
 
 `off` API is used to remove all event handlers for a specific event.
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   off(event : String)
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -21,7 +30,12 @@ off ``EDITOR``
 Parameters
 ++++++++++
 
-eventName: ``String``
++----------+--------------+-----------------------------------------------------------------------+
+| Name     | Type         | Description                                                           |
++==========+==============+=======================================================================+
+| event    | ``String``   | Required. A String that specifies the name of the event.              |
++----------+--------------+-----------------------------------------------------------------------+
+
 
 Events
 ++++++

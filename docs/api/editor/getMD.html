@@ -103,14 +103,19 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../namespaces.html">API Namespaces</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="getHTML.html">getHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">getMD <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">getMD <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="getText.html">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="setNodeData.html">setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="insertText.html">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadText.html">loadText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadHTML.html">loadHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
@@ -195,7 +200,15 @@
             
   <div class="section" id="getmd-editor">
 <h1>getMD <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#getmd-editor" title="Permalink to this headline">¶</a></h1>
-<p>getMD API extracts the content from the INK Editor and parse it into Markdown format string as a resultant value.</p>
+<p><cite>getMD</cite> API extracts the content from the INK Editor and parse it into Markdown format string as a resultant value.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">getMD</span><span class="p">()</span> <span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -229,6 +242,7 @@
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+</div>
 </div>
 
 

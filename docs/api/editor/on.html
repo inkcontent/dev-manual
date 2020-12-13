@@ -106,15 +106,18 @@
 <li class="toctree-l3"><a class="reference internal" href="getMD.html">getMD <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getText.html">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#events">Events</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="setNodeData.html">setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="insertText.html">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadText.html">loadText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadHTML.html">loadHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
@@ -199,7 +202,15 @@
             
   <div class="section" id="on-editor">
 <h1>on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#on-editor" title="Permalink to this headline">¶</a></h1>
-<p><cite>on</cite> API is used to attach event handler for a specific event.</p>
+<p><cite>on</cite> API is used to register event listener for a specific event.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">on</span><span class="p">(</span><span class="nx">listener</span> <span class="o">:</span> <span class="kd">function</span><span class="p">,</span> <span class="nx">event</span> <span class="o">:</span> <span class="nb">String</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -229,10 +240,32 @@
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+</div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p>eventHandler: <code class="docutils literal notranslate"><span class="pre">function</span></code></p>
-<p>eventName: <code class="docutils literal notranslate"><span class="pre">String</span></code></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>listener</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">function</span></code></p></td>
+<td><p>Required. Specifies the function to run when the event occurs.</p></td>
+</tr>
+<tr class="row-odd"><td><p>event</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>Required. A String that specifies the name of the event.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="events">
 <h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>

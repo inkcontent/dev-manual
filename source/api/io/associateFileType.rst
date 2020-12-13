@@ -1,7 +1,17 @@
 associateFileType ``IO``
 ========================
 
-associateFileType API is used to register filetype association with your plugin callback handler. This handler will be triggered every time this file type is loaded in INK editor. 
+`associateFileType` API is used to register filetype association with your plugin callback handler. This handler will be triggered every time this file type is loaded in INK editor. 
+
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   associateFileType(triggerCB: function, extension: String)
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -25,6 +35,10 @@ associateFileType API is used to register filetype association with your plugin 
 Parameters
 ++++++++++
 
-callback: ``function``
-
-extension: ``String``
++--------------------+--------------------------+-------------------------------------------------------------------------------------+
+| Name               | Type                     | Description                                                                         |
++====================+==========================+=====================================================================================+
+| triggerCB          | ``function``             | Required. Callback to trigger when associated file type gets loaded in INK editor.  |
++--------------------+--------------------------+-------------------------------------------------------------------------------------+
+| extension          | ``String``               | Required. Extension to associate with.                                              |
++--------------------+--------------------------+-------------------------------------------------------------------------------------+

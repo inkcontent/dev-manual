@@ -15,9 +15,10 @@ EDITOR ``INKAPI.editor``
 	editor/on
 	editor/off
 	editor/getAllBlocks
+	editor/removeBlock
 	editor/getSelectedData
 	editor/setSelection
-	editor/setNodeData
+	editor/setBlockData
 	editor/insertText
 	editor/loadText
 	editor/loadHTML

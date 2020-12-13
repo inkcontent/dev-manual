@@ -1,8 +1,17 @@
 setSelection ``EDITOR``
 =======================
 
-setSelection API can be used to select entire block using its path.
+`setSelection` API can be used to apply cursor selection on any content block using its path.
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   setSelection(path : Array<Number>)
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -20,7 +29,11 @@ setSelection API can be used to select entire block using its path.
 Parameters
 ++++++++++
 
-path: ``Array<String>``
++----------+-------------------+-----------------------------------------------------------------------+
+| Name     | Type              | Description                                                           |
++==========+===================+=======================================================================+
+| path     | ``Array<Number>`` | Required. Path of the block to be selected.                           |
++----------+-------------------+-----------------------------------------------------------------------+
 
 .. note::
 

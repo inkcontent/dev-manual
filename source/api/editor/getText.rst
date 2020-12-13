@@ -1,8 +1,17 @@
 getText ``EDITOR``
 ==================
 
-getText API extracts the content from the INK Editor and parse it into plain text string as a resultant value.
+`getText` API extracts the content from the INK Editor and parse it into plain text string as a resultant value.
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   getText() : Promise<String>
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:

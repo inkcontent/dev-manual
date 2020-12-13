@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="loadText EDITOR" href="loadText.html" />
-    <link rel="prev" title="setNodeData EDITOR" href="setNodeData.html" /> 
+    <link rel="prev" title="setBlockData EDITOR" href="setBlockData.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -108,10 +108,13 @@
 <li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="setNodeData.html">setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
 </ul>
 </li>
@@ -198,7 +201,15 @@
             
   <div class="section" id="inserttext-editor">
 <h1>insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#inserttext-editor" title="Permalink to this headline">¶</a></h1>
-<p>insertText API can be used to insert or replace text in the INK editor.</p>
+<p><cite>insertText</cite> API can be used to insert or replace text from any content block in the INK editor.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">insertText</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nb">Number</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">offset</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">length</span><span class="o">?:</span> <span class="nb">Number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -219,23 +230,51 @@
 
   <span class="kr">const</span> <span class="nx">EDITOR</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
 
-  <span class="c1">// EDITOR.insertText(text, path, offset, length?)</span>
-  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">insertText</span><span class="p">(</span><span class="s2">&quot;Some Text&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">2</span><span class="p">,</span> <span class="mf">1</span><span class="p">],</span> <span class="mf">10</span><span class="p">);</span> <span class="c1">//Add `Some Text` on block [2,1] after 10 character offset</span>
+  <span class="c1">//Add `Some Text` on block [2,1] after 10 character offset</span>
+  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">insertText</span><span class="p">(</span><span class="s2">&quot;Some Text&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">2</span><span class="p">,</span> <span class="mf">1</span><span class="p">],</span> <span class="mf">10</span><span class="p">);</span>
 
   <span class="c1">//for replacing some text, provide length parameter too</span>
   <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">insertText</span><span class="p">(</span><span class="s2">&quot;Some Text&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">2</span><span class="p">,</span> <span class="mf">1</span><span class="p">],</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">6</span><span class="p">);</span>
 
-  <span class="c1">//above line will replace the next 6 charaters with the provided text</span>
+  <span class="c1">//above line will replace the next 6 characters with the provided text</span>
 
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+</div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p>text: <code class="docutils literal notranslate"><span class="pre">String</span></code></p>
-<p>path: <code class="docutils literal notranslate"><span class="pre">Array&lt;Number&gt;</span></code></p>
-<p>offset: <code class="docutils literal notranslate"><span class="pre">Number</span></code></p>
-<p>length?: <code class="docutils literal notranslate"><span class="pre">Number</span></code></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>text</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>Required. Text to be inserted.</p></td>
+</tr>
+<tr class="row-odd"><td><p>path</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Array&lt;Number&gt;</span></code></p></td>
+<td><p>Required. Path of the block.</p></td>
+</tr>
+<tr class="row-even"><td><p>offset</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Number</span></code></p></td>
+<td><p>Required. Offset from start of block.</p></td>
+</tr>
+<tr class="row-odd"><td><p>length</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Number</span></code></p></td>
+<td><p>length of text (characters) to replace</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Learn more about how blocks work in INK editor <a class="reference external" href="../../advanced/INK-Editor-Blocks-Architecture.html">here</a>.</p>
@@ -254,7 +293,7 @@
         <a href="loadText.html" class="btn btn-neutral float-right" title="loadText EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="setNodeData.html" class="btn btn-neutral float-left" title="setNodeData EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="setBlockData.html" class="btn btn-neutral float-left" title="setBlockData EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

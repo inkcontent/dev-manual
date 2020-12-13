@@ -39,7 +39,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="setNodeData EDITOR" href="setNodeData.html" />
+    <link rel="next" title="setBlockData EDITOR" href="setBlockData.html" />
     <link rel="prev" title="getSelectedData EDITOR" href="getSelectedData.html" /> 
 </head>
 
@@ -108,12 +108,15 @@
 <li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="setNodeData.html">setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="insertText.html">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadText.html">loadText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadHTML.html">loadHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
@@ -198,7 +201,15 @@
             
   <div class="section" id="setselection-editor">
 <h1>setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#setselection-editor" title="Permalink to this headline">¶</a></h1>
-<p>setSelection API can be used to select entire block using its path.</p>
+<p><cite>setSelection</cite> API can be used to apply cursor selection on any content block using its path.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">setSelection</span><span class="p">(</span><span class="nx">path</span> <span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nb">Number</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -218,9 +229,28 @@
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+</div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p>path: <code class="docutils literal notranslate"><span class="pre">Array&lt;String&gt;</span></code></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>path</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Array&lt;Number&gt;</span></code></p></td>
+<td><p>Required. Path of the block to be selected.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Learn more about how blocks work in INK editor <a class="reference external" href="../../advanced/INK-Editor-Blocks-Architecture.html">here</a>.</p>
@@ -236,7 +266,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="setNodeData.html" class="btn btn-neutral float-right" title="setNodeData EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="setBlockData.html" class="btn btn-neutral float-right" title="setBlockData EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="getSelectedData.html" class="btn btn-neutral float-left" title="getSelectedData EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

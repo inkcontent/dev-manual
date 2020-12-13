@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="setSelection EDITOR" href="setSelection.html" />
-    <link rel="prev" title="getAllBlocks EDITOR" href="getAllBlocks.html" /> 
+    <link rel="prev" title="removeBlock EDITOR" href="removeBlock.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -108,9 +108,14 @@
 <li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="setNodeData.html">setNodeData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="insertText.html">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadText.html">loadText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadHTML.html">loadHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
@@ -195,7 +200,15 @@
             
   <div class="section" id="getselecteddata-editor">
 <h1>getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#getselecteddata-editor" title="Permalink to this headline">¶</a></h1>
-<p>getSelectedData API provides data about the selected content in the INK Editor.</p>
+<p><cite>getSelectedData</cite> API extract the currently selected content from INK editor and returns related details.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">getSelectedData</span><span class="p">()</span> <span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nb">Object</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -223,7 +236,7 @@
 
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 
-  <span class="p">})</span>
+  <span class="p">});</span>
 
   <span class="c1">//Or use async/await</span>
 
@@ -233,6 +246,7 @@
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+</div>
 </div>
 
 
@@ -246,7 +260,7 @@
         <a href="setSelection.html" class="btn btn-neutral float-right" title="setSelection EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="getAllBlocks.html" class="btn btn-neutral float-left" title="getAllBlocks EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="removeBlock.html" class="btn btn-neutral float-left" title="removeBlock EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

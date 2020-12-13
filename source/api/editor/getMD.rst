@@ -1,8 +1,17 @@
 getMD ``EDITOR``
 ==================
 
-getMD API extracts the content from the INK Editor and parse it into Markdown format string as a resultant value.
+`getMD` API extracts the content from the INK Editor and parse it into Markdown format string as a resultant value.
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   getMD() : Promise<String>
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
