@@ -32,6 +32,32 @@ Example
 
       const blocks = await EDITOR.getAllBlocks();
       console.log(blocks);
+
+      /*
+        Console Output:
+
+        [
+          {
+            "type": "heading-one",
+            "align": "left",
+            "children": [ ... ],
+            "key": 58,
+            "path": [0],
+            "text": "My Title",
+            "isBlock": true
+          },
+          {
+            "type": "paragraph",
+            "align": "left",
+            "children": [ ... ],
+            "key": 59,
+            "path": [1],
+            "text": "My content here!...",
+            "isBlock": true
+          }
+        ]
+
+      */
       
     });
 

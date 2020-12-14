@@ -8,7 +8,7 @@ Syntax
 
 .. code-block:: javascript
 
-   removeBlock(path : Array<Number>) : Promise<null>
+   removeBlock(path : Array<Number>)
 
 Example
 +++++++

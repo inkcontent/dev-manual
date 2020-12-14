@@ -32,5 +32,17 @@ Example
 
       const data = await EDITOR.getSelectedData();
       console.log(data);
+
+      /*
+        Console Output:
+
+        {
+          "offset": 3,
+          "path": [1],
+          "text": "content",
+          "length": 7
+        }
+
+      */
       
     });

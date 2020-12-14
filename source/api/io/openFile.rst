@@ -28,6 +28,19 @@ Example
 
       IO.openFile(callback, { ext: "txt", allowMultipleFiles: false })      
 
+      /*
+        Console Output on file open callback:
+
+        [
+          {
+            path: "C:\Users\Me\sample.txt", 
+            filename: : "sample.txt",
+            data: Uint8Array(114) [ ... ] 
+          }
+        ]
+
+      */
+
     });
 
 

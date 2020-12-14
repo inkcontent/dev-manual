@@ -38,3 +38,22 @@ IO ``INKAPI.io``
 	io/saveFile
 	io/openFile
 	io/associateFileType
+
+
+NET ``INKAPI.net``
+++++++++++++++++++
+.. toctree::
+	:maxdepth: 1
+
+	net/request
+	net/get
+	net/post
+
+
+NLP ``INKAPI.nlp``
+++++++++++++++++++
+.. toctree::
+	:maxdepth: 1
+
+	nlp/getPOS
+	nlp/getReadability

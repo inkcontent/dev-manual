@@ -39,7 +39,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Plugin Workers" href="../../advanced/plugin-workers.html" />
+    <link rel="next" title="request NET" href="../net/request.html" />
     <link rel="prev" title="openFile IO" href="openFile.html" /> 
 </head>
 
@@ -114,6 +114,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#net-inkapi-net">NET <code class="docutils literal notranslate"><span class="pre">INKAPI.net</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#nlp-inkapi-nlp">NLP <code class="docutils literal notranslate"><span class="pre">INKAPI.nlp</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -213,7 +215,22 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
@@ -225,6 +242,21 @@
 
   <span class="c1">//Associating docx filetype with this plugin handler</span>
   <span class="nx">IO</span><span class="p">.</span><span class="nx">associateFileType</span><span class="p">(</span><span class="nx">docxFileHandler</span><span class="p">,</span> <span class="s2">&quot;docx&quot;</span><span class="p">);</span>
+
+
+  <span class="cm">/*</span>
+<span class="cm">    Console Output when associated file is triggered:</span>
+
+<span class="cm">    [</span>
+<span class="cm">      {</span>
+<span class="cm">        path: &quot;C:\Users\Me\sample.txt&quot;,</span>
+<span class="cm">        filename: : &quot;sample.txt&quot;,</span>
+<span class="cm">        data: Uint8Array(114) [ ... ]</span>
+<span class="cm">      }</span>
+<span class="cm">    ]</span>
+
+<span class="cm">  */</span>
+
 
 <span class="p">});</span>
 </pre></div>
@@ -266,7 +298,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../advanced/plugin-workers.html" class="btn btn-neutral float-right" title="Plugin Workers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../net/request.html" class="btn btn-neutral float-right" title="request NET" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="openFile.html" class="btn btn-neutral float-left" title="openFile IO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

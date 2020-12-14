@@ -33,6 +33,27 @@ Example
       const htmlStr = await EDITOR.getHTML(true); // receive images src in local source url
       console.log(htmlStr);
       
+      /*
+        Console Output:
+
+        <!DOCTYPE html>
+        <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+          <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+              <meta name="generator" content="INK" />
+              <meta name="description" content="" />
+              <title>My Title</title>
+          </head>
+          <body>
+            <h1 style="text-align: left">My Title</h1>
+            <p style="text-align: left">My content here!...</p>
+          </body>
+        </html>
+
+      */
+
     });
 
 

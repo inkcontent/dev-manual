@@ -29,6 +29,21 @@ Example
       //Associating docx filetype with this plugin handler
       IO.associateFileType(docxFileHandler, "docx");
 
+
+      /*
+        Console Output when associated file is triggered:
+
+        [
+          {
+            path: "C:\Users\Me\sample.txt", 
+            filename: : "sample.txt",
+            data: Uint8Array(114) [ ... ] 
+          }
+        ]
+
+      */
+
+
     });
 
 

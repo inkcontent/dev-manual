@@ -33,4 +33,14 @@ Example
       const text = await EDITOR.getText();
       console.log(text);
       
+      /*
+        Console Output:
+
+        My Title
+
+        My content here!...
+
+      */
+
+
     });

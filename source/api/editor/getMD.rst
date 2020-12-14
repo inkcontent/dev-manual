@@ -30,5 +30,20 @@ Example
 
       const mdStr = await EDITOR.getMD();
       console.log(mdStr);
+
+      /*
+        Console Output:
+
+        ---
+        title : |
+        'My Title'
+        ---
+
+        My Title
+        ========
+
+        My content here!...
+
+      */
       
     });
