@@ -193,7 +193,7 @@
             
   <div class="section" id="associatefiletype-io">
 <h1>associateFileType <code class="docutils literal notranslate"><span class="pre">IO</span></code><a class="headerlink" href="#associatefiletype-io" title="Permalink to this headline">¶</a></h1>
-<p><cite>associateFileType</cite> API is used to register filetype association with your plugin callback handler. This handler will be triggered every time this file type is loaded in INK editor.</p>
+<p><cite>associateFileType</cite> API is used to register filetype association with your plugin callback handler. This handler will be triggered every time this file type is loaded in INK editor. This will also allow users to select the associated file types in open file dialog.</p>
 <div class="section" id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">associateFileType</span><span class="p">(</span><span class="nx">triggerCB</span><span class="o">:</span> <span class="kd">function</span><span class="p">,</span> <span class="nx">extension</span><span class="o">:</span> <span class="nb">String</span><span class="p">)</span>
@@ -249,9 +249,9 @@
 
 <span class="cm">    [</span>
 <span class="cm">      {</span>
-<span class="cm">        path: &quot;C:\Users\Me\sample.txt&quot;,</span>
-<span class="cm">        filename: : &quot;sample.txt&quot;,</span>
-<span class="cm">        data: Uint8Array(114) [ ... ]</span>
+<span class="cm">        path: &quot;C:\Users\Me\sample.docx&quot;,</span>
+<span class="cm">        filename: : &quot;sample.docx&quot;,</span>
+<span class="cm">        data: Uint8Array(11434) [ ... ]</span>
 <span class="cm">      }</span>
 <span class="cm">    ]</span>
 

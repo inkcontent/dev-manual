@@ -1,7 +1,7 @@
 associateFileType ``IO``
 ========================
 
-`associateFileType` API is used to register filetype association with your plugin callback handler. This handler will be triggered every time this file type is loaded in INK editor. 
+`associateFileType` API is used to register filetype association with your plugin callback handler. This handler will be triggered every time this file type is loaded in INK editor. This will also allow users to select the associated file types in open file dialog.
 
 Syntax
 ++++++
@@ -35,9 +35,9 @@ Example
 
         [
           {
-            path: "C:\Users\Me\sample.txt", 
-            filename: : "sample.txt",
-            data: Uint8Array(114) [ ... ] 
+            path: "C:\Users\Me\sample.docx", 
+            filename: : "sample.docx",
+            data: Uint8Array(11434) [ ... ] 
           }
         ]
 
