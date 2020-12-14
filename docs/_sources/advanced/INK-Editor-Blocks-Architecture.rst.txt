@@ -11,6 +11,6 @@ INK Editor uses blocks architecture to maintain its content, control the changes
 
 Because it's an array based hierarchy, a node can be accessed with its index (its path).
 
-For example, an image node have properties such as `caption`, `alt text`, `title`, `size`, etc. and all of these properties can be modified using ``editor.setNodeData`` API.
+For example, an image node have properties such as `caption`, `alt text`, `title`, `size`, etc. and all of these properties can be modified using ``editor.setBlockData`` API.
 
 To explore different properties of different types of blocks. Try using ``editor.getAllBlocks`` API to extract all the blocks in the document.

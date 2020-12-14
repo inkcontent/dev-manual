@@ -1,8 +1,17 @@
 getSelectedData ``EDITOR``
 ==========================
 
-getSelectedData API provides data about the selected content in the INK Editor.
+`getSelectedData` API extract the currently selected content from INK editor and returns related details.
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   getSelectedData() : Promise<Object>
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -17,11 +26,23 @@ getSelectedData API provides data about the selected content in the INK Editor.
 
         console.log(data);
       
-      })
+      });
 
       //Or use async/await
 
       const data = await EDITOR.getSelectedData();
       console.log(data);
+
+      /*
+        Console Output:
+
+        {
+          "offset": 3,
+          "path": [1],
+          "text": "content",
+          "length": 7
+        }
+
+      */
       
     });

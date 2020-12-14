@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>get NET &mdash; INK API 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/ink.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="post NET" href="post.html" />
+    <link rel="prev" title="request NET" href="request.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> INK API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/demoPlugins.html">Demo Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/quickStart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/packageJsonFile.html">Package File</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Command line tools:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">INK CLI Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/usage.html">INK CLI Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">APIs:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">INK APIs Intro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../namespaces.html">API Namespaces</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#net-inkapi-net">NET <code class="docutils literal notranslate"><span class="pre">INKAPI.net</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="request.html">request <code class="docutils literal notranslate"><span class="pre">NET</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">get <code class="docutils literal notranslate"><span class="pre">NET</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="post.html">post <code class="docutils literal notranslate"><span class="pre">NET</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#nlp-inkapi-nlp">NLP <code class="docutils literal notranslate"><span class="pre">INKAPI.nlp</span></code></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/plugin-workers.html">Plugin Workers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/debug-window.html">Debug Window</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INK API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
+        
+      <li>get <code class="docutils literal notranslate"><span class="pre">NET</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/net/get.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="get-net">
+<h1>get <code class="docutils literal notranslate"><span class="pre">NET</span></code><a class="headerlink" href="#get-net" title="Permalink to this headline">¶</a></h1>
+<p>Requires <code class="docutils literal notranslate"><span class="pre">network</span></code> permission.</p>
+<p><cite>get</cite> API is a shorthand way of making <cite>GET</cite> API calls.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">headers</span><span class="o">?:</span> <span class="nx">object</span><span class="p">)</span> <span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">object</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kr">const</span> <span class="nx">NET</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">net</span><span class="p">;</span>
+
+  <span class="c1">// making GET request</span>
+
+  <span class="nx">NET</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/posts/1&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)=&gt;{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">});</span>
+
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>url</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>Required. API endpoint to make network calls.</p></td>
+</tr>
+<tr class="row-odd"><td><p>headers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p>Add headers to your API call.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="post.html" class="btn btn-neutral float-right" title="post NET" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="request.html" class="btn btn-neutral float-left" title="request NET" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, INK Content, Inc.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

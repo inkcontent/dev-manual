@@ -1,8 +1,17 @@
 on ``EDITOR``
 =============
 
-`on` API is used to attach event handler for a specific event.
+`on` API is used to register event listener for a specific event.
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   on(listener : function, event : String)
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -25,9 +34,14 @@ on ``EDITOR``
 Parameters
 ++++++++++
 
-eventHandler: ``function``
++----------+--------------+-----------------------------------------------------------------------+
+| Name     | Type         | Description                                                           |
++==========+==============+=======================================================================+
+| listener | ``function`` | Required. Specifies the function to run when the event occurs.        |
++----------+--------------+-----------------------------------------------------------------------+
+| event    | ``String``   | Required. A String that specifies the name of the event.              |
++----------+--------------+-----------------------------------------------------------------------+
 
-eventName: ``String``
 
 Events
 ++++++

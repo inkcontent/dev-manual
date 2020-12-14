@@ -106,12 +106,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="saveFile.html">saveFile <code class="docutils literal notranslate"><span class="pre">IO</span></code></a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">openFile <code class="docutils literal notranslate"><span class="pre">IO</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">options</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="associateFileType.html">associateFileType <code class="docutils literal notranslate"><span class="pre">IO</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#net-inkapi-net">NET <code class="docutils literal notranslate"><span class="pre">INKAPI.net</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#nlp-inkapi-nlp">NLP <code class="docutils literal notranslate"><span class="pre">INKAPI.nlp</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -189,7 +194,15 @@
             
   <div class="section" id="openfile-io">
 <h1>openFile <code class="docutils literal notranslate"><span class="pre">IO</span></code><a class="headerlink" href="#openfile-io" title="Permalink to this headline">¶</a></h1>
-<p>openFile API is used to open and read files content from user disk. It opens a dialog box and prompts user to select a file or multiple files to open.</p>
+<p><cite>openFile</cite> API is used to open and read files content from user disk. It opens a dialog box and prompts user to select a file or multiple files to open.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">openFile</span><span class="p">(</span><span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span><span class="p">,</span> <span class="nx">options</span><span class="o">:</span> <span class="nx">object</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -202,7 +215,20 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
@@ -214,13 +240,74 @@
 
   <span class="nx">IO</span><span class="p">.</span><span class="nx">openFile</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="p">{</span> <span class="nx">ext</span><span class="o">:</span> <span class="s2">&quot;txt&quot;</span><span class="p">,</span> <span class="nx">allowMultipleFiles</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>
 
+  <span class="cm">/*</span>
+<span class="cm">    Console Output on file open callback:</span>
+
+<span class="cm">    [</span>
+<span class="cm">      {</span>
+<span class="cm">        path: &quot;C:\Users\Me\sample.txt&quot;,</span>
+<span class="cm">        filename: : &quot;sample.txt&quot;,</span>
+<span class="cm">        data: Uint8Array(114) [ ... ]</span>
+<span class="cm">      }</span>
+<span class="cm">    ]</span>
+
+<span class="cm">  */</span>
+
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+</div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p>callback: <code class="docutils literal notranslate"><span class="pre">function</span></code></p>
-<p>options: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">ext:</span> <span class="pre">String</span> <span class="pre">|</span> <span class="pre">Array&lt;String&gt;,</span> <span class="pre">allowMultipleFiles:</span> <span class="pre">Boolean</span> <span class="pre">}</span></code></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 22%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>callback</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">function</span></code></p></td>
+<td><p>Required. callback to be triggered with opened file content.</p></td>
+</tr>
+<tr class="row-odd"><td><p>options</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p>Required. Extension for save dialog filters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ext</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">|</span> <span class="pre">Array&lt;String&gt;</span></code></p></td>
+<td><p>Extension filter for open dialog box.</p></td>
+</tr>
+<tr class="row-odd"><td><p>allowMultipleFiles</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Boolean</span></code></p></td>
+<td><p>If <cite>true</cite> user can select multiple files from open dialog box.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

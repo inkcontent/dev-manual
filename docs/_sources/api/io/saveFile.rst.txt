@@ -1,8 +1,17 @@
 saveFile ``IO``
 ===============
 
-saveFile API is used to write content on user disk. It opens a dialog box and prompts user to select a location for content to save with a defined extension. 
+`saveFile` API is used to write content on user disk. It opens a dialog box and prompts user to select a location for content to save with a defined extension. 
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   saveFile(content: String | ArrayBuffer, extension: String)
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -19,14 +28,13 @@ saveFile API is used to write content on user disk. It opens a dialog box and pr
       
     });
 
-
 Parameters
 ++++++++++
 
-content: ``String | ArrayBuffer``
-
-First parameter will accept content in the form of either ``String`` or an ``ArrayBuffer``.
-
-Extension: ``String``
-
-Second parameter will accept the extension filter that you want for your file.
++--------------------+--------------------------+-----------------------------------------------------------------------+
+| Name               | Type                     | Description                                                           |
++====================+==========================+=======================================================================+
+| content            | ``String | ArrayBuffer`` | Required. Content to write on disk.                                   |
++--------------------+--------------------------+-----------------------------------------------------------------------+
+| extension          | ``String``               | Required. Extension for save dialog filters.                          |
++--------------------+--------------------------+-----------------------------------------------------------------------+

@@ -10,3 +10,7 @@
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
     color: rgb(228, 92, 150);
 }
+
+.wy-table-responsive table td {
+    white-space: normal;
+}

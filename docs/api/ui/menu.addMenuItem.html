@@ -104,12 +104,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">addMenuItem <code class="docutils literal notranslate"><span class="pre">UI.menu</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#net-inkapi-net">NET <code class="docutils literal notranslate"><span class="pre">INKAPI.net</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#nlp-inkapi-nlp">NLP <code class="docutils literal notranslate"><span class="pre">INKAPI.nlp</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -187,7 +191,15 @@
             
   <div class="section" id="addmenuitem-ui-menu">
 <h1>addMenuItem <code class="docutils literal notranslate"><span class="pre">UI.menu</span></code><a class="headerlink" href="#addmenuitem-ui-menu" title="Permalink to this headline">¶</a></h1>
-<p>addMenuItem API allows plugin to create a menu item in INK Editor.</p>
+<p><cite>addMenuItem</cite> API allows plugin to create a menu item in INK Editor.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">addMenuItem</span><span class="p">(</span><span class="nx">triggerCB</span><span class="o">:</span> <span class="kd">function</span><span class="p">,</span> <span class="p">...</span><span class="nx">Structure</span><span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -223,12 +235,32 @@
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+</div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p>Callback Trigger: <code class="docutils literal notranslate"><span class="pre">function</span></code></p>
-<p>First parameter will accept a callback function which will be trigger on menu item click.</p>
-<p>Structure Path: <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]:String</span></code></p>
-<p>All the parameters after first callback param will be string and will be a structure path to the menu item entry location.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>triggerCB</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">function</span></code></p></td>
+<td><p>Required. a callback function which will be triggered on menu item click.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Structure</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Array&lt;String&gt;</span></code></p></td>
+<td><p>Required. All the parameters after first callback param will be a structure path to the menu item entry location.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

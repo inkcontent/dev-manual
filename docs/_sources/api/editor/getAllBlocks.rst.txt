@@ -1,7 +1,17 @@
 getAllBlocks ``EDITOR``
 =======================
 
-getAllBlocks API extracts the content from the INK Editor in the blocks format.
+`getAllBlocks` API extracts the content from the INK Editor in the blocks format. It provides meta data for each block including it's current value, path, key, children nodes, etc.
+
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   getAllBlocks() : Promise<[Object]>
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -22,6 +32,32 @@ getAllBlocks API extracts the content from the INK Editor in the blocks format.
 
       const blocks = await EDITOR.getAllBlocks();
       console.log(blocks);
+
+      /*
+        Console Output:
+
+        [
+          {
+            "type": "heading-one",
+            "align": "left",
+            "children": [ ... ],
+            "key": 58,
+            "path": [0],
+            "text": "My Title",
+            "isBlock": true
+          },
+          {
+            "type": "paragraph",
+            "align": "left",
+            "children": [ ... ],
+            "key": 59,
+            "path": [1],
+            "text": "My content here!...",
+            "isBlock": true
+          }
+        ]
+
+      */
       
     });
 

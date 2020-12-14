@@ -1,8 +1,17 @@
 addMenuItem ``UI.menu``
 =======================
 
-addMenuItem API allows plugin to create a menu item in INK Editor. 
+`addMenuItem` API allows plugin to create a menu item in INK Editor. 
 
+Syntax
+++++++
+
+.. code-block:: javascript
+
+   addMenuItem(triggerCB: function, ...Structure: Array<String>)
+
+Example
++++++++
 
 .. code-block:: javascript
     :linenos:
@@ -29,10 +38,10 @@ addMenuItem API allows plugin to create a menu item in INK Editor.
 Parameters
 ++++++++++
 
-Callback Trigger: ``function``
-
-First parameter will accept a callback function which will be trigger on menu item click.
-
-Structure Path: ``[ ]:String``
-
-All the parameters after first callback param will be string and will be a structure path to the menu item entry location.
++----------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Name           | Type              | Description                                                                                                                                          |
++================+===================+======================================================================================================================================================+
+| triggerCB      | ``function``      | Required. a callback function which will be triggered on menu item click.                                                                            |
++----------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Structure      | ``Array<String>`` | Required. All the parameters after first callback param will be a structure path to the menu item entry location.                                    |
++----------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -15,9 +15,10 @@ EDITOR ``INKAPI.editor``
 	editor/on
 	editor/off
 	editor/getAllBlocks
+	editor/removeBlock
 	editor/getSelectedData
 	editor/setSelection
-	editor/setNodeData
+	editor/setBlockData
 	editor/insertText
 	editor/loadText
 	editor/loadHTML
@@ -37,3 +38,22 @@ IO ``INKAPI.io``
 	io/saveFile
 	io/openFile
 	io/associateFileType
+
+
+NET ``INKAPI.net``
+++++++++++++++++++
+.. toctree::
+	:maxdepth: 1
+
+	net/request
+	net/get
+	net/post
+
+
+NLP ``INKAPI.nlp``
+++++++++++++++++++
+.. toctree::
+	:maxdepth: 1
+
+	nlp/getPOS
+	nlp/getReadability
