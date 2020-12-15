@@ -1,6 +1,6 @@
 get ``NET``
 ===========
-Requires ``network`` permission.
+Requires ``network`` permission. For more information click `here <../../advanced/permissions.html>`_.
 
 `get` API is a shorthand way of making `GET` API calls.
 

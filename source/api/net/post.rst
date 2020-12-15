@@ -1,6 +1,6 @@
 post ``NET``
 ===========
-Requires ``network`` permission.
+Requires ``network`` permission. For more information click `here <../../advanced/permissions.html>`_.
 
 `post` API is a shorthand way of making `POST` API calls.
 
