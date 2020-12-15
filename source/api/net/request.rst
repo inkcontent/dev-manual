@@ -1,6 +1,6 @@
 request ``NET``
 ===============
-Requires ``network`` permission.
+Requires ``network`` permission. For more information click `here <../../advanced/permissions.html>`_.
 
 `request` API is used to make network API calls. It returns a promise with network response as resultant value.
 
