@@ -35,9 +35,10 @@ Welcome to INK API's documentation!
 	:maxdepth: 1
 	:caption: Advanced:
 	
-	advanced/plugin-workers
 	advanced/debug-window
-	advanced/INK-Editor-Blocks-Architecture
 	advanced/permissions
+	advanced/custom-sidebar-ui
+	advanced/plugin-workers
+	advanced/INK-Editor-Blocks-Architecture
 	
 

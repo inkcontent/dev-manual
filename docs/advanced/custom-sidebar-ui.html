@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Permissions &mdash; INK API 2.0 documentation</title>
+  <title>Custom Sidebar UI &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Custom Sidebar UI" href="custom-sidebar-ui.html" />
-    <link rel="prev" title="Debug Window" href="debug-window.html" /> 
+    <link rel="next" title="Plugin Workers" href="plugin-workers.html" />
+    <link rel="prev" title="Permissions" href="permissions.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,12 +105,8 @@
 <p class="caption"><span class="caption-text">Advanced:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="debug-window.html">Debug Window</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Permissions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api-permissions">API Permissions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="custom-sidebar-ui.html">Custom Sidebar UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Custom Sidebar UI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plugin-workers.html">Plugin Workers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
 </ul>
@@ -159,13 +155,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Permissions</li>
+      <li>Custom Sidebar UI</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/advanced/permissions.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/advanced/custom-sidebar-ui.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,59 +174,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="permissions">
-<h1>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h1>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">permissions</span></code> key to request special APIs for your INK Plugin. This key is an array of strings, and each string is a request for a permission.</p>
-<p>Some INK APIs requires special permissions and to use them in your plugin, you must mention the permissions requests in your <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file under <code class="docutils literal notranslate"><span class="pre">ink-plugin</span></code> section.</p>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;example-plugin&quot;</span><span class="p">,</span>
-
-<span class="p">...</span>
-<span class="p">...</span>
-<span class="p">...</span>
-
-<span class="s2">&quot;ink-plugin&quot;</span><span class="o">:</span> <span class="p">{</span>
-
-  <span class="s2">&quot;permissions&quot;</span><span class="o">:</span> <span class="p">[</span>
-    <span class="s2">&quot;network&quot;</span><span class="p">,</span>
-  <span class="p">]</span>
-<span class="p">}</span>
+  <div class="section" id="custom-sidebar-ui">
+<h1>Custom Sidebar UI<a class="headerlink" href="#custom-sidebar-ui" title="Permalink to this headline">¶</a></h1>
+<p>INK Editor allows plugins to create their own custom sidebar and its content. Using this, plugins can easily create an interface for their settings, personalization, or maybe just their descriptions.</p>
+<p>INK Editor use simple JSON based architecture to create custom sidebar and it’s children elements. Which allows the power to create complex UI with simplicity.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">uiCreate</span><span class="p">({</span>
+  <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
+  <span class="n">sidebarTitle</span><span class="p">:</span> <span class="s2">&quot;Custom Sidebar&quot;</span><span class="p">,</span>
+  <span class="n">icon</span><span class="p">:</span> <span class="s2">&quot;./sidebarIcon.svg&quot;</span><span class="p">,</span>
+  <span class="n">children</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Input&quot;</span><span class="p">,</span>
+      <span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;input&quot;</span><span class="p">,</span>
+      <span class="n">styles</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">margin</span><span class="p">:</span> <span class="s2">&quot;10px auto&quot;</span><span class="p">,</span>
+        <span class="n">width</span><span class="p">:</span> <span class="s2">&quot;95%&quot;</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
+      <span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;imgBtn&quot;</span><span class="p">,</span>
+      <span class="n">image</span><span class="p">:</span> <span class="s2">&quot;./dice.jpg&quot;</span><span class="p">,</span>
+      <span class="n">styles</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">margin</span><span class="p">:</span> <span class="s2">&quot;20px auto&quot;</span><span class="p">,</span>
+        <span class="n">width</span><span class="p">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
+        <span class="n">height</span><span class="p">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
+        <span class="n">backgroundSize</span><span class="p">:</span> <span class="s2">&quot;contain&quot;</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">});</span>
 </pre></div>
-</td></tr></table></div>
-<p>In the above example, we are requesting permission to use network access APIs which will unlock APIs from <code class="docutils literal notranslate"><span class="pre">NET</span></code> namespace.</p>
-<p>If you request permissions for your plugin, then the INK Editor will inform the user at install time that the plugin is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The INK Editor may also allow the user to inspect a plugin’s privileges after installation. As the request to grant privileges may impact on users’ willingness to install your plugin, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your plugin’s readme file.</p>
-</div>
-<div class="section" id="api-permissions">
-<h2>API Permissions<a class="headerlink" href="#api-permissions" title="Permalink to this headline">¶</a></h2>
-<p>Following are the currently available API permissions.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Permission Request</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>network</p></td>
-<td><p><cite>network</cite> permission will allow network access to the plugins. Plugins having this permission will have access to <code class="docutils literal notranslate"><span class="pre">net</span></code> namespace APIs.</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 
@@ -242,10 +216,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="custom-sidebar-ui.html" class="btn btn-neutral float-right" title="Custom Sidebar UI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="plugin-workers.html" class="btn btn-neutral float-right" title="Plugin Workers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="debug-window.html" class="btn btn-neutral float-left" title="Debug Window" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="permissions.html" class="btn btn-neutral float-left" title="Permissions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
