@@ -30,6 +30,16 @@ Welcome to INK API's documentation!
 	
 	api/index
 	api/namespaces
+
+.. toctree::
+	:maxdepth: 1
+	:caption: Custom UI:
+
+	custom-ui/Sidebar
+	custom-ui/Input
+	custom-ui/Button
+	custom-ui/Toggle
+	custom-ui/Container
 	
 .. toctree::
 	:maxdepth: 1
