@@ -1,5 +1,5 @@
-Custom Sidebar UI
-=================
+Custom UI
+=========
 
 INK Editor allows plugins to create their own custom sidebar and its content. Using this, plugins can easily create an interface for their settings, personalization, or maybe just their descriptions.
 

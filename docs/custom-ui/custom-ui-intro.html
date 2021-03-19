@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Custom Sidebar UI &mdash; INK API 2.0 documentation</title>
+  <title>Custom UI &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Plugin Workers" href="plugin-workers.html" />
-    <link rel="prev" title="Permissions" href="permissions.html" /> 
+    <link rel="next" title="Custom Elements" href="custom-elements.html" />
+    <link rel="prev" title="uiCreate INKAPI" href="../api/root/uiCreate.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,20 +103,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Custom UI:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../custom-ui/Sidebar.html">Sidebar</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom-ui/Input.html">Input</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom-ui/Button.html">Button</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom-ui/Toggle.html">Toggle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom-ui/Container.html">Container</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Custom UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-elements.html">Custom Elements</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="debug-window.html">Debug Window</a></li>
-<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Custom Sidebar UI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugin-workers.html">Plugin Workers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/debug-window.html">Debug Window</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/plugin-workers.html">Plugin Workers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
 </ul>
 
             
@@ -163,13 +159,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Custom Sidebar UI</li>
+      <li>Custom UI</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/advanced/custom-sidebar-ui.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/custom-ui/custom-ui-intro.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,8 +178,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="custom-sidebar-ui">
-<h1>Custom Sidebar UI<a class="headerlink" href="#custom-sidebar-ui" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="custom-ui">
+<h1>Custom UI<a class="headerlink" href="#custom-ui" title="Permalink to this headline">¶</a></h1>
 <p>INK Editor allows plugins to create their own custom sidebar and its content. Using this, plugins can easily create an interface for their settings, personalization, or maybe just their descriptions.</p>
 <p>INK Editor use simple JSON based architecture to create custom sidebar and it’s child components. Which allows the power to create complex UI with simplicity.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">uiCreate</span><span class="p">({</span>
@@ -261,10 +257,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="plugin-workers.html" class="btn btn-neutral float-right" title="Plugin Workers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="custom-elements.html" class="btn btn-neutral float-right" title="Custom Elements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="permissions.html" class="btn btn-neutral float-left" title="Permissions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../api/root/uiCreate.html" class="btn btn-neutral float-left" title="uiCreate INKAPI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

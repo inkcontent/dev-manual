@@ -35,11 +35,8 @@ Welcome to INK API's documentation!
 	:maxdepth: 1
 	:caption: Custom UI:
 
-	custom-ui/Sidebar
-	custom-ui/Input
-	custom-ui/Button
-	custom-ui/Toggle
-	custom-ui/Container
+	custom-ui/custom-ui-intro
+	custom-ui/custom-elements
 	
 .. toctree::
 	:maxdepth: 1
@@ -47,7 +44,6 @@ Welcome to INK API's documentation!
 	
 	advanced/debug-window
 	advanced/permissions
-	advanced/custom-sidebar-ui
 	advanced/plugin-workers
 	advanced/INK-Editor-Blocks-Architecture
 	
