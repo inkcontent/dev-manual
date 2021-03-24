@@ -65,3 +65,6 @@ ROOT ``INKAPI``
 	:maxdepth: 1
 
 	root/uiCreate
+	root/addEvent
+	root/addChild
+	root/removeComponent

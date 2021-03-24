@@ -223,7 +223,83 @@
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">EDITOR</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
+
+  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">getHTML</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">htmlStr</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">htmlStr</span><span class="p">);</span>
+
+  <span class="p">});</span>
+
+  <span class="c1">//Or use async/await</span>
+
+  <span class="kd">const</span> <span class="nx">htmlStr</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">getHTML</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span> <span class="c1">// receive images src in local source url</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">htmlStr</span><span class="p">);</span>
+
+  <span class="cm">/*</span>
+<span class="cm">    Console Output:</span>
+
+<span class="cm">    &lt;!DOCTYPE html&gt;</span>
+<span class="cm">    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;en&quot;&gt;</span>
+<span class="cm">      &lt;head&gt;</span>
+<span class="cm">          &lt;meta charset=&quot;UTF-8&quot; /&gt;</span>
+<span class="cm">          &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span>
+<span class="cm">          &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span>
+<span class="cm">          &lt;meta name=&quot;generator&quot; content=&quot;INK&quot; /&gt;</span>
+<span class="cm">          &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;</span>
+<span class="cm">          &lt;title&gt;My Title&lt;/title&gt;</span>
+<span class="cm">      &lt;/head&gt;</span>
+<span class="cm">      &lt;body&gt;</span>
+<span class="cm">        &lt;h1 style=&quot;text-align: left&quot;&gt;My Title&lt;/h1&gt;</span>
+<span class="cm">        &lt;p style=&quot;text-align: left&quot;&gt;My content here!...&lt;/p&gt;</span>
+<span class="cm">      &lt;/body&gt;</span>
+<span class="cm">    &lt;/html&gt;</span>
+
+<span class="cm">  */</span>
+
+<span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
 </div>
