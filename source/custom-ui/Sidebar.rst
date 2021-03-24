@@ -3,17 +3,6 @@ Sidebar
 
 ``Sidebar`` component creates a new sidebar on the left panel in INK editor. It takes a title and icon and creates sidebar accordingly.
 
-Syntax
-++++++
-
-.. code-block:: javascript
-
-   INKAPI.uiCreate({
-    type: "Sidebar",
-    sidebarTitle: String,
-    icon: String,
-   })
-
 Example
 +++++++
 
@@ -24,23 +13,32 @@ Example
 
     INKAPI.ready(async () => {
 
-      const EDITOR = INKAPI.editor;
-
-      EDITOR.getHTML().then(htmlStr => {
-
-        console.log(htmlStr);
-      
+      const sidebarObj = await INKAPI.uiCreate({
+        type: "Sidebar",
+        sidebarTitle: "Personal Sidebar",
+        icon: "./sample.svg",
+        children: [],
       });
 
-      //Or use async/await
-
-      const htmlStr = await EDITOR.getHTML(true); // receive images src in local source url
-      console.log(htmlStr);
-      
-      /*
-        Console Output:
-
-        
-      */
+      console.log(sidebarObj);
 
     });
+
+Options
++++++++
+
++--------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Name         | Type                                   | Description                                                                                                                                                                                                                                                                                         |
++==============+========================================+=====================================================================================================================================================================================================================================================================================================+
+| id?          | ``String | Number``                    | You can assign a unique id to the component. It will be helpful for listening to events and removing component in future. If ``id`` is not given by user (or if given ``id`` is already associated with a UI component) then an automatically generated id is assigned to the component.            |
++--------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| type         | ``Sidebar``                            | This field should be passed ``Sidebar`` as value to create a Sidebar component. This value is case-sensitive.                                                                                                                                                                                       |
++--------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sidebarTitle | ``String``                             | This will set the title for your sidebar which will be displayed on top of your sidebar content and as a tooltip on the sidebar expand button.                                                                                                                                                      |
++--------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| icon         | ``String``                             | You can pass your icon source url (relative to the assets folder in your plugin src directory) here. This will set custom icon for the sidebar expand button. It is recommended to use black filled svg.                                                                                            |
++--------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| layout?      | ``[ columns: Number, rows: Number ]``  | This will create grid like structure for your Sidebar content. you can specify number of columns and rows for the layout. Each children can position themselves using styles field.                                                                                                                 |
++--------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| children?    | ``Array<Objects>``                     | This field takes an array of child component's JSON, which are to be created in Sidebar content.                                                                                                                                                                                                    |
++--------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

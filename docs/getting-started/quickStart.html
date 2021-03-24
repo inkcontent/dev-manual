@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Quick Start &mdash; INK API 2.0 documentation</title>
   
@@ -19,7 +19,10 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
+  
+
   
 
   
@@ -32,7 +35,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -54,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> INK API
+            <a href="../index.html" class="icon icon-home"> INK API
           
 
           
@@ -158,6 +160,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -169,7 +173,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/getting-started/quickStart.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -197,23 +201,23 @@
 <p>Under the <code class="docutils literal notranslate"><span class="pre">engines</span></code> section in <code class="docutils literal notranslate"><span class="pre">package.json</span></code>, the CLI tool will automatically add the latest version of the INK Editor Support. Feel free to change this according to your need.</p>
 </div>
 <p>In its simplest form, the plug-in main entry JS file looks like this:</p>
-<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">IO</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">Editor</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">IO</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">Editor</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
 
   <span class="c1">//your code here</span>
 
@@ -230,22 +234,22 @@
 <div class="section" id="how-to-add-a-menu-item">
 <h2>How to Add a Menu Item<a class="headerlink" href="#how-to-add-a-menu-item" title="Permalink to this headline">¶</a></h2>
 <p>Now, let’s add a menu item in the INK application using the <code class="docutils literal notranslate"><span class="pre">UI</span></code> API Namespace:</p>
-<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
 
   <span class="c1">//your code here</span>
   <span class="nx">UI</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">addMenuItem</span><span class="p">(</span><span class="nx">clickHandler</span><span class="p">,</span> <span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;Export&quot;</span><span class="p">,</span> <span class="s2">&quot;as Demo HTML&quot;</span><span class="p">);</span>
@@ -259,43 +263,43 @@
 </td></tr></table></div>
 <p>The above code adds a menu item inside the INK export menu. It also binds the menu option’s click handler with the callback function.</p>
 <p>Next, let’s retrieve the INK Editor content and save it to disk as HTML:</p>
-<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;./inkapi.js&#39;</span><span class="p">);</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">UI</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
 
   <span class="c1">//your code here</span>
   <span class="nx">UI</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">addMenuItem</span><span class="p">(</span><span class="nx">clickHandler</span><span class="p">,</span> <span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;Export&quot;</span><span class="p">,</span> <span class="s2">&quot;as Demo HTML&quot;</span><span class="p">);</span>
 
 <span class="p">});</span>
 
-<span class="nx">async</span> <span class="kd">function</span> <span class="nx">clickHandler</span><span class="p">(){</span>
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">clickHandler</span><span class="p">(){</span>
 
   <span class="c1">//do something on menu click</span>
-  <span class="kr">const</span> <span class="nx">Editor</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">IO</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">Editor</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">IO</span><span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">io</span><span class="p">;</span>
 
-  <span class="kr">const</span> <span class="nx">htmlString</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Editor</span><span class="p">.</span><span class="nx">getHTML</span><span class="p">();</span> <span class="c1">//retrieve editor content in html format.</span>
+  <span class="kd">const</span> <span class="nx">htmlString</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">Editor</span><span class="p">.</span><span class="nx">getHTML</span><span class="p">();</span> <span class="c1">//retrieve editor content in html format.</span>
 
   <span class="nx">IO</span><span class="p">.</span><span class="nx">saveFile</span><span class="p">(</span><span class="nx">htmlString</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">);</span>  <span class="c1">//open save dialog with only html file extension</span>
 
@@ -332,37 +336,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="packageJsonFile.html" class="btn btn-neutral float-right" title="Package File" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="demoPlugins.html" class="btn btn-neutral float-left" title="Demo Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="packageJsonFile.html" class="btn btn-neutral float-right" title="Package File" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="demoPlugins.html" class="btn btn-neutral float-left" title="Demo Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INK Content, Inc.
+        &#169; Copyright 2020, INK Content, Inc..
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
