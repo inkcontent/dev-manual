@@ -30,14 +30,21 @@ Welcome to INK API's documentation!
 	
 	api/index
 	api/namespaces
+
+.. toctree::
+	:maxdepth: 1
+	:caption: Custom UI:
+
+	custom-ui/custom-ui-intro
+	custom-ui/custom-elements
 	
 .. toctree::
 	:maxdepth: 1
 	:caption: Advanced:
 	
-	advanced/plugin-workers
 	advanced/debug-window
-	advanced/INK-Editor-Blocks-Architecture
 	advanced/permissions
+	advanced/plugin-workers
+	advanced/INK-Editor-Blocks-Architecture
 	
 

@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>addEvent INKAPI &mdash; INK API 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/ink.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="addChild INKAPI" href="addChild.html" />
+    <link rel="prev" title="uiCreate INKAPI" href="uiCreate.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> INK API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/demoPlugins.html">Demo Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/quickStart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/packageJsonFile.html">Package File</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Command line tools:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">INK CLI Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/usage.html">INK CLI Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">APIs:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">INK APIs Intro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../namespaces.html">API Namespaces</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#net-inkapi-net">NET <code class="docutils literal notranslate"><span class="pre">INKAPI.net</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#nlp-inkapi-nlp">NLP <code class="docutils literal notranslate"><span class="pre">INKAPI.nlp</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#root-inkapi">ROOT <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="uiCreate.html">uiCreate <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">addEvent <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="addChild.html">addChild <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeComponent.html">removeComponent <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Custom UI:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../custom-ui/custom-ui-intro.html">Custom UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom-ui/custom-elements.html">Custom Elements</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/debug-window.html">Debug Window</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/plugin-workers.html">Plugin Workers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INK API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
+        
+      <li>addEvent <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/root/addEvent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="addevent-inkapi">
+<h1>addEvent <code class="docutils literal notranslate"><span class="pre">INKAPI</span></code><a class="headerlink" href="#addevent-inkapi" title="Permalink to this headline">¶</a></h1>
+<p><cite>addEvent</cite> API is used to register event listener callbacks against UI component’s events.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">addEvent</span><span class="p">(</span><span class="nx">componentId</span><span class="o">:</span> <span class="nb">String</span> <span class="o">|</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">eventName</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">ListenerCB</span><span class="o">:</span> <span class="nb">Function</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">btnId</span> <span class="o">=</span> <span class="s2">&quot;btnId&quot;</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">sidebarObject</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">uiCreate</span><span class="p">({</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">sidebarTitle</span><span class="o">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;myUniqueSidebarId&quot;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span><span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;Click Me!&quot;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="nx">btnId</span><span class="p">,</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">});</span>
+
+  <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span><span class="nx">btnId</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">clickHandler</span><span class="p">)</span>
+
+  <span class="kd">function</span> <span class="nx">clickHandler</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Button Clicked!&quot;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 11%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>componentId</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">|</span> <span class="pre">Number</span></code></p></td>
+<td><p>Id of the UI Component whose event we need to listen to.</p></td>
+</tr>
+<tr class="row-odd"><td><p>eventName</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>Name of the event. Every component can have different event that they emit like click, change, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p>ListenerCB</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Function</span></code></p></td>
+<td><p>Callback function to be called when the event occurs.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="addChild.html" class="btn btn-neutral float-right" title="addChild INKAPI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="uiCreate.html" class="btn btn-neutral float-left" title="uiCreate INKAPI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, INK Content, Inc..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
