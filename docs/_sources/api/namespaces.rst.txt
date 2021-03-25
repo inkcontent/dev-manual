@@ -66,5 +66,5 @@ ROOT ``INKAPI``
 
 	root/uiCreate
 	root/addEvent
-	root/addChild
+	root/addComponent
 	root/removeComponent

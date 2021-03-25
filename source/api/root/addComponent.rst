@@ -1,14 +1,14 @@
-addChild ``INKAPI``
-===================
+addComponent ``INKAPI``
+=======================
 
-`addChild` API is used to add UI component dynamically as a child of other components.
+`addComponent` API is used to add UI component dynamically as a child of other components.
 
 Syntax
 ++++++
 
 .. code-block:: javascript
 
-   addChild(jsonObj: Object, parentId: String | Number)
+   addComponent(jsonObj: Object, parentId: String | Number)
    
 Example
 +++++++
@@ -36,7 +36,7 @@ Example
       */
 
       // Adding Button Component to Sidebar dynamically
-      INKAPI.addChild({
+      INKAPI.addComponent({
         type: "Button",
         text: "Send",
       }, sidebarId);
