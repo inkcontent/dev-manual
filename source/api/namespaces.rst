@@ -29,6 +29,10 @@ UI ``INKAPI.ui``
 	:maxdepth: 1
 	
 	ui/menu.addMenuItem
+	ui/create
+	ui/addEvent
+	ui/addComponent
+	ui/removeComponent
 
 IO ``INKAPI.io``
 ++++++++++++++++
@@ -57,14 +61,3 @@ NLP ``INKAPI.nlp``
 
 	nlp/getPOS
 	nlp/getReadability
-
-
-ROOT ``INKAPI``
-++++++++++++++++++
-.. toctree::
-	:maxdepth: 1
-
-	root/uiCreate
-	root/addEvent
-	root/addComponent
-	root/removeComponent
