@@ -1,14 +1,14 @@
-addComponent ``INKAPI``
-=======================
+removeComponent ``UI``
+======================
 
-`addComponent` API is used to add UI component dynamically as a child of other components.
+`removeComponent` API is used to remove any custom UI component using it's unique ID.
 
 Syntax
 ++++++
 
 .. code-block:: javascript
 
-   addComponent(jsonObj: Object, parentId: String | Number)
+   removeComponent(id: String | Number)
    
 Example
 +++++++
@@ -20,9 +20,11 @@ Example
 
     INKAPI.ready(async () => {
 
+      const UI = INKAPI.ui;
+
       const sidebarId = "myUniqueSidebarId";
 
-      const sidebarObject = await INKAPI.uiCreate({
+      const sidebarObject = await UI.create({
         type: "Sidebar",
         sidebarTitle: "My Personal Sidebar",
         icon: "./sample.svg",
@@ -35,11 +37,8 @@ Example
       .
       */
 
-      // Adding Button Component to Sidebar dynamically
-      INKAPI.addComponent({
-        type: "Button",
-        text: "Send",
-      }, sidebarId);
+      // Removing Sidebar Component
+      UI.removeComponent(sidebarId);
 
     });
 
@@ -50,7 +49,5 @@ Parameters
 +--------------+----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Name         | Type                 | Description                                                                                                                                                   |
 +==============+======================+===============================================================================================================================================================+
-| jsonObj      | ``Object``           | JSON based configuration for creating custom UI components.                                                                                                   |
-+--------------+----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| parentId     | ``String | Number``  | Id of the custom UI component, where the component needs to be inserted.                                                                                      |
+| id           | ``String | Number``  | Id of the custom UI component to be removed.                                                                                                                  |
 +--------------+----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+

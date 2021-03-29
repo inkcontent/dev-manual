@@ -1,5 +1,5 @@
-addEvent ``INKAPI``
-===================
+addEvent ``UI``
+===============
 
 `addEvent` API is used to register event listener callbacks against UI component's events.
 
@@ -20,9 +20,11 @@ Example
 
     INKAPI.ready(async () => {
 
+      const UI = INKAPI.ui;
+
       const btnId = "btnId";
 
-      const sidebarObject = await INKAPI.uiCreate({
+      const sidebarObject = await UI.create({
         type: "Sidebar",
         sidebarTitle: "My Personal Sidebar",
         icon: "./sample.svg",
@@ -36,7 +38,7 @@ Example
         ]
       });
 
-      INKAPI.addEvent(btnId, "click", clickHandler)
+      UI.addEvent(btnId, "click", clickHandler)
 
       function clickHandler(){
         console.log("Button Clicked!")      
