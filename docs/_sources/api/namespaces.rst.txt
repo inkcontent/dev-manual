@@ -33,6 +33,8 @@ UI ``INKAPI.ui``
 	ui/addEvent
 	ui/addComponent
 	ui/removeComponent
+	ui/changeTheme
+	ui/addThemeModifier
 
 IO ``INKAPI.io``
 ++++++++++++++++
