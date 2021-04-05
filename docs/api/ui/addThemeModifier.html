@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="saveFile IO" href="../io/saveFile.html" />
+    <link rel="next" title="on UI" href="on.html" />
     <link rel="prev" title="changeTheme UI" href="changeTheme.html" /> 
 </head>
 
@@ -111,7 +111,15 @@
 <li class="toctree-l3"><a class="reference internal" href="addComponent.html">addComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="removeComponent.html">removeComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="changeTheme.html">changeTheme <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">addThemeModifier <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">addThemeModifier <code class="docutils literal notranslate"><span class="pre">UI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a></li>
@@ -202,6 +210,144 @@
             
   <div class="section" id="addthememodifier-ui">
 <h1>addThemeModifier <code class="docutils literal notranslate"><span class="pre">UI</span></code><a class="headerlink" href="#addthememodifier-ui" title="Permalink to this headline">¶</a></h1>
+<p><cite>addThemeModifier</cite> API registers a theme modifier on INK editor for your plugin. Which basically allows your plugin to make theme changes if your theme modifier is selected.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">addThemeModifier</span><span class="p">(</span><span class="nx">title</span><span class="o">:</span> <span class="nb">String</span><span class="p">)</span> <span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><cite>addThemeModifier</cite> API returns a unique id that will be helpful to check if your theme modifier is selected.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more info on how to make theme changes on INK editor, check here.</p>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="c1">// creates a theme modifier with title &quot;Dark AMOLED Theme&quot; and saved returned ID in a variable.</span>
+  <span class="kd">const</span> <span class="nx">themeModifierId</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">addThemeModifier</span><span class="p">(</span><span class="s2">&quot;Dark AMOLED Theme&quot;</span><span class="p">);</span>
+
+  <span class="nx">UI</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">themeModifierSwitchHandler</span><span class="p">,</span> <span class="s2">&quot;themeSwitch&quot;</span><span class="p">)</span>
+
+  <span class="kd">function</span> <span class="nx">themeModifierSwitchHandler</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+
+    <span class="c1">//check if the selected theme modifier is not your plugin&#39;s</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">data</span> <span class="o">!==</span> <span class="nx">themeModifierId</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+    <span class="c1">// Make theme changes here...</span>
+
+  <span class="p">}</span>
+
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>options</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>Required. Contains the Hex colors for INK editor theme.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>base</p></td>
+<td><p>true</p></td>
+<td><p>changes theme background color. This field is required while changing theme.</p></td>
+</tr>
+<tr class="row-odd"><td><p>font</p></td>
+<td><p>true</p></td>
+<td><p>changes the color of the font used in the INK Editor. This field is required while changing theme.</p></td>
+</tr>
+<tr class="row-even"><td><p>primary</p></td>
+<td><p>false</p></td>
+<td><p>color of link, icon, active state, selection state and hover state.</p></td>
+</tr>
+<tr class="row-odd"><td><p>border</p></td>
+<td><p>false</p></td>
+<td><p>color of borders and separators used in left and right sidebars.</p></td>
+</tr>
+<tr class="row-even"><td><p>panelIcon</p></td>
+<td><p>false</p></td>
+<td><p>color of icons on left and right sidebars.</p></td>
+</tr>
+<tr class="row-odd"><td><p>toggle</p></td>
+<td><p>false</p></td>
+<td><p>color of boxes related to tasks.</p></td>
+</tr>
+<tr class="row-even"><td><p>sidebar</p></td>
+<td><p>false</p></td>
+<td><p>color of left and right sidebar.</p></td>
+</tr>
+<tr class="row-odd"><td><p>inputBase</p></td>
+<td><p>false</p></td>
+<td><p>background color of inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p>sidebarHover</p></td>
+<td><p>false</p></td>
+<td><p>background color in sidebar when hovered.</p></td>
+</tr>
+<tr class="row-odd"><td><p>inkBrand</p></td>
+<td><p>false</p></td>
+<td><p>INK brand color (pink)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -210,7 +356,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../io/saveFile.html" class="btn btn-neutral float-right" title="saveFile IO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="on.html" class="btn btn-neutral float-right" title="on UI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="changeTheme.html" class="btn btn-neutral float-left" title="changeTheme UI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

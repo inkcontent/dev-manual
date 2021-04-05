@@ -1,11 +1,7 @@
-off ``EDITOR``
-==============
+off ``UI``
+==========
 
 `off` API is used to remove all event handlers for a specific event.
-
-.. warning::
-  This API will be deprecated soon. Use `UI.off <../ui/off.html>`_ here instead.
-
 
 Syntax
 ++++++
@@ -24,10 +20,10 @@ Example
 
     INKAPI.ready(async () => {
 
-      const EDITOR = INKAPI.editor;
+      const UI = INKAPI.ui;
 
       //removing event handlers
-      EDITOR.off("contentChange")
+      UI.off("contentChange")
       
     });
 
@@ -46,4 +42,10 @@ Events
 
 Following events are available for plugins to subscribe to;
 
-``"contentChange"``
++---------------+---------------------------------------------------------------------------------------+
+| Event         | Description                                                                           |
++===============+=======================================================================================+
+| contentChange | This event is triggered every time the INK editor content is changed.                 |
++---------------+---------------------------------------------------------------------------------------+
+| themeSwitch   | This event is triggered when user switch the theme or selects a theme modifier.       |
++---------------+---------------------------------------------------------------------------------------+

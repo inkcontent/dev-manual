@@ -3,6 +3,9 @@ on ``EDITOR``
 
 `on` API is used to register event listener for a specific event.
 
+.. warning::
+  This API will be deprecated soon. Use `UI.on <../ui/on.html>`_ here instead.
+
 Syntax
 ++++++
 

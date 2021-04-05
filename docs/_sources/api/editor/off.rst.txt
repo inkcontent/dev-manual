@@ -3,6 +3,10 @@ off ``EDITOR``
 
 `off` API is used to remove all event handlers for a specific event.
 
+.. warning::
+  This API will be deprecated soon. Use `UI.off <../ui/off.html>`_ here instead.
+
+
 Syntax
 ++++++
 

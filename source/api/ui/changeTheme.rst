@@ -52,6 +52,7 @@ Example
 .. note::
 
   ``changeTheme`` api will only work if your plugin theme modifier is selected by the user in INK editor.
+  For more info on how to make theme changes on INK editor, check here.
 
 
 Parameters
