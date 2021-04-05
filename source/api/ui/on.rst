@@ -1,10 +1,7 @@
-on ``EDITOR``
-=============
+on ``UI``
+=========
 
 `on` API is used to register event listener for a specific event.
-
-.. warning::
-  This API will be deprecated soon. Use `UI.on <../ui/on.html>`_ here instead.
 
 Syntax
 ++++++
@@ -23,14 +20,14 @@ Example
 
     INKAPI.ready(async () => {
 
-      const EDITOR = INKAPI.editor;
+      const UI = INKAPI.ui;
 
       const contentChangeHandler = (data) => {
         console.log(data);
       }
 
       //subscribing to an event with event handler
-      EDITOR.on(contentChangeHandler, "contentChange")
+      UI.on(contentChangeHandler, "contentChange")
       
     });
 
@@ -51,4 +48,10 @@ Events
 
 Following events are available for plugins to subscribe to;
 
-``"contentChange"``
++---------------+---------------------------------------------------------------------------------------+
+| Event         | Description                                                                           |
++===============+=======================================================================================+
+| contentChange | This event is triggered every time the INK editor content is changed.                 |
++---------------+---------------------------------------------------------------------------------------+
+| themeSwitch   | This event is triggered when user switch the theme or selects a theme modifier.       |
++---------------+---------------------------------------------------------------------------------------+

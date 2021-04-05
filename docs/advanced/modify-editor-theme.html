@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Modify Editor Theme &mdash; INK API 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/ink.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="INK Editor Blocks Architecture" href="INK-Editor-Blocks-Architecture.html" />
+    <link rel="prev" title="Plugin Workers" href="plugin-workers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> INK API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/demoPlugins.html">Demo Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/quickStart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/packageJsonFile.html">Package File</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Command line tools:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/index.html">INK CLI Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/usage.html">INK CLI Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">APIs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">INK APIs Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/namespaces.html">API Namespaces</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom UI:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../custom-ui/custom-ui-intro.html">Custom UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom-ui/custom-elements.html">Custom Elements</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="debug-window.html">Debug Window</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-workers.html">Plugin Workers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modify Editor Theme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">INK API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Modify Editor Theme</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/advanced/modify-editor-theme.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="modify-editor-theme">
+<h1>Modify Editor Theme<a class="headerlink" href="#modify-editor-theme" title="Permalink to this headline">¶</a></h1>
+<p>INK allow plugin developers to change INK Editor themes according to their preference. Theme color pallete can be modified dynamically by plugin on the basis of day time or maybe the content scores.</p>
+<p>To create a plugin that will modify INK Editor theme, first we will have to register a theme modifier using <code class="docutils literal notranslate"><span class="pre">addThemeModifier</span></code> API.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">themeKey</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">addThemeModifier</span><span class="p">(</span><span class="s2">&quot;Greyish&quot;</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This will basically tell the INK Editor that this plugin wants to make theme modifications. And an option with the given name will be created in the themes dropdown.</p>
+<p>Now, it is important that user selects your theme modifier before you make any theme changes. If your plugin theme modifier isn’t selected and you try to make theme changes, it won’t work and will respond with a rejection.</p>
+<p>To figure out when our theme modifier is selected, we will have to listent to an event called <code class="docutils literal notranslate"><span class="pre">themeSwitch</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">themeKey</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">addThemeModifier</span><span class="p">(</span><span class="s2">&quot;Greyish&quot;</span><span class="p">);</span>
+
+  <span class="nx">UI</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">themeSwitchHandler</span><span class="p">,</span> <span class="s2">&quot;themeSwitch&quot;</span><span class="p">)</span>
+
+  <span class="kd">function</span> <span class="nx">themeSwitchHandler</span><span class="p">(</span><span class="nx">selectedId</span><span class="p">){</span>
+    <span class="c1">//empty for now</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Alright, now we have registered a theme modifier and we are listening for when the theme gets switched. In <cite>themeSwitch</cite> event listener, callback function gets a parameter with the ID of selected theme. We can use this ID to match with our <cite>themeKey</cite> to check if our theme modifier got selected and if it did gets selected, we can make changes to the theme using <code class="docutils literal notranslate"><span class="pre">changeTheme</span></code> API.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">themeKey</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">addThemeModifier</span><span class="p">(</span><span class="s2">&quot;Greyish&quot;</span><span class="p">);</span>
+
+  <span class="nx">UI</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">themeSwitchHandler</span><span class="p">,</span> <span class="s2">&quot;themeSwitch&quot;</span><span class="p">)</span>
+
+  <span class="kd">function</span> <span class="nx">themeSwitchHandler</span><span class="p">(</span><span class="nx">selectedId</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">selectedId</span> <span class="o">!==</span> <span class="nx">themeKey</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="c1">// return if selected theme is not our theme modifier</span>
+    <span class="nx">UI</span><span class="p">.</span><span class="nx">changeTheme</span><span class="p">({</span>
+      <span class="nx">base</span><span class="o">:</span> <span class="s2">&quot;#424642&quot;</span><span class="p">,</span>
+      <span class="nx">font</span><span class="o">:</span> <span class="s2">&quot;#f3f4ed&quot;</span><span class="p">,</span>
+      <span class="nx">primary</span><span class="o">:</span> <span class="s2">&quot;#c06014&quot;</span><span class="p">,</span>
+      <span class="nx">sidebar</span><span class="o">:</span> <span class="s2">&quot;#536162&quot;</span><span class="p">,</span>
+      <span class="nx">inkBrand</span><span class="o">:</span> <span class="s2">&quot;#e2d5d5&quot;</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>That’s all folks, we just created a plugin that will create a new theme option called “Greyish” and when user will select it, it will change accordingly.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="INK-Editor-Blocks-Architecture.html" class="btn btn-neutral float-right" title="INK Editor Blocks Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="plugin-workers.html" class="btn btn-neutral float-left" title="Plugin Workers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, INK Content, Inc..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

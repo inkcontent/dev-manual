@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>post NET &mdash; INK API 2.0 documentation</title>
+  <title>off UI &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="getPOS NLP" href="../nlp/getPOS.html" />
-    <link rel="prev" title="get NET" href="get.html" /> 
+    <link rel="next" title="saveFile IO" href="../io/saveFile.html" />
+    <link rel="prev" title="on UI" href="on.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,19 +104,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">INK APIs Intro</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../namespaces.html">API Namespaces</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#net-inkapi-net">NET <code class="docutils literal notranslate"><span class="pre">INKAPI.net</span></code></a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="request.html">request <code class="docutils literal notranslate"><span class="pre">NET</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="get.html">get <code class="docutils literal notranslate"><span class="pre">NET</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">post <code class="docutils literal notranslate"><span class="pre">NET</span></code></a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="menu.addMenuItem.html">addMenuItem <code class="docutils literal notranslate"><span class="pre">UI.menu</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="create.html">create <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="addEvent.html">addEvent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="addComponent.html">addComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeComponent.html">removeComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="changeTheme.html">changeTheme <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="addThemeModifier.html">addThemeModifier <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">off <code class="docutils literal notranslate"><span class="pre">UI</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#events">Events</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#io-inkapi-io">IO <code class="docutils literal notranslate"><span class="pre">INKAPI.io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespaces.html#net-inkapi-net">NET <code class="docutils literal notranslate"><span class="pre">INKAPI.net</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../namespaces.html#nlp-inkapi-nlp">NLP <code class="docutils literal notranslate"><span class="pre">INKAPI.nlp</span></code></a></li>
 </ul>
 </li>
@@ -183,13 +190,13 @@
         
           <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
         
-      <li>post <code class="docutils literal notranslate"><span class="pre">NET</span></code></li>
+      <li>off <code class="docutils literal notranslate"><span class="pre">UI</span></code></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/api/net/post.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/ui/off.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -202,13 +209,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="post-net">
-<h1>post <code class="docutils literal notranslate"><span class="pre">NET</span></code><a class="headerlink" href="#post-net" title="Permalink to this headline">¶</a></h1>
-<p>Requires <code class="docutils literal notranslate"><span class="pre">network</span></code> permission. For more information click <a class="reference external" href="../../advanced/permissions.html">here</a>.</p>
-<p><cite>post</cite> API is a shorthand way of making <cite>POST</cite> API calls.</p>
+  <div class="section" id="off-ui">
+<h1>off <code class="docutils literal notranslate"><span class="pre">UI</span></code><a class="headerlink" href="#off-ui" title="Permalink to this headline">¶</a></h1>
+<p><cite>off</cite> API is used to remove all event handlers for a specific event.</p>
 <div class="section" id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">body</span><span class="o">:</span> <span class="nx">object</span><span class="p">,</span> <span class="nx">headers</span><span class="o">?:</span> <span class="nx">object</span><span class="p">)</span> <span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">object</span><span class="o">&gt;</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">off</span><span class="p">(</span><span class="nx">event</span> <span class="o">:</span> <span class="nb">String</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -223,26 +229,14 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
-<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
-  <span class="kd">const</span> <span class="nx">NET</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">net</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
 
-  <span class="c1">// making POST request</span>
-
-  <span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">someKey</span><span class="o">:</span> <span class="s2">&quot;Some Data&quot;</span> <span class="p">}</span>
-
-  <span class="nx">NET</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/posts/1&quot;</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)=&gt;{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-    <span class="p">});</span>
+  <span class="c1">//removing event handlers</span>
+  <span class="nx">UI</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="s2">&quot;contentChange&quot;</span><span class="p">)</span>
 
 <span class="p">});</span>
 </pre></div>
@@ -252,9 +246,9 @@
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 19%" />
-<col style="width: 71%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -263,17 +257,32 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>url</p></td>
+<tr class="row-even"><td><p>event</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>Required. API endpoint to make network calls.</p></td>
+<td><p>Required. A String that specifies the name of the event.</p></td>
 </tr>
-<tr class="row-odd"><td><p>body</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
-<td><p>Required. Contains data to send from a client to the API.</p></td>
+</tbody>
+</table>
+</div>
+<div class="section" id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
+<p>Following events are available for plugins to subscribe to;</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Event</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
-<tr class="row-even"><td><p>headers</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
-<td><p>Add headers to your API call.</p></td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>contentChange</p></td>
+<td><p>This event is triggered every time the INK editor content is changed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>themeSwitch</p></td>
+<td><p>This event is triggered when user switch the theme or selects a theme modifier.</p></td>
 </tr>
 </tbody>
 </table>
@@ -286,8 +295,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../nlp/getPOS.html" class="btn btn-neutral float-right" title="getPOS NLP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="get.html" class="btn btn-neutral float-left" title="get NET" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../io/saveFile.html" class="btn btn-neutral float-right" title="saveFile IO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="on.html" class="btn btn-neutral float-left" title="on UI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

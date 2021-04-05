@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>addEvent UI &mdash; INK API 2.0 documentation</title>
+  <title>changeTheme UI &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="addComponent UI" href="addComponent.html" />
-    <link rel="prev" title="create UI" href="create.html" /> 
+    <link rel="next" title="addThemeModifier UI" href="addThemeModifier.html" />
+    <link rel="prev" title="removeComponent UI" href="removeComponent.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,15 +107,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="menu.addMenuItem.html">addMenuItem <code class="docutils literal notranslate"><span class="pre">UI.menu</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="create.html">create <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">addEvent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="addEvent.html">addEvent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="addComponent.html">addComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeComponent.html">removeComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">changeTheme <code class="docutils literal notranslate"><span class="pre">UI</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">options</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="addComponent.html">addComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="removeComponent.html">removeComponent <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="changeTheme.html">changeTheme <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="addThemeModifier.html">addThemeModifier <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
@@ -189,13 +190,13 @@
         
           <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
         
-      <li>addEvent <code class="docutils literal notranslate"><span class="pre">UI</span></code></li>
+      <li>changeTheme <code class="docutils literal notranslate"><span class="pre">UI</span></code></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/api/ui/addEvent.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/ui/changeTheme.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -208,14 +209,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="addevent-ui">
-<h1>addEvent <code class="docutils literal notranslate"><span class="pre">UI</span></code><a class="headerlink" href="#addevent-ui" title="Permalink to this headline">¶</a></h1>
-<p><cite>addEvent</cite> API is used to register event listener callbacks against UI component’s events.</p>
+  <div class="section" id="changetheme-ui">
+<h1>changeTheme <code class="docutils literal notranslate"><span class="pre">UI</span></code><a class="headerlink" href="#changetheme-ui" title="Permalink to this headline">¶</a></h1>
+<p><cite>changeTheme</cite> API can be used to dynamically change your INK editor theme with the combinations of different colors.</p>
 <div class="section" id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">addEvent</span><span class="p">(</span><span class="nx">componentId</span><span class="o">:</span> <span class="nb">String</span> <span class="o">|</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">eventName</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">ListenerCB</span><span class="o">:</span> <span class="nb">Function</span><span class="p">)</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">changeTheme</span><span class="p">({</span>
+ <span class="nx">base</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">font</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">primary</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">border</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">panelIcon</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">toggle</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">sidebar</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">inputBase</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">sidebarHover</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+ <span class="nx">inkBrand</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span>
+<span class="p">});</span>
 </pre></div>
 </div>
+<p>INK editor can create a new theme from just two colors (<code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">font</span></code>). It smartly calculates all the other type of colors required to complete the theme. Although if user don’t like the auto calculated colors or just want to modify theme as per their liking, They can provide colors to the more advanced color fields.
+Currently <code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">font</span></code> colors are compulsory for <code class="docutils literal notranslate"><span class="pre">changeTheme</span></code> api.</p>
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
@@ -234,56 +248,37 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
   <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
 
-  <span class="kd">const</span> <span class="nx">btnId</span> <span class="o">=</span> <span class="s2">&quot;btnId&quot;</span><span class="p">;</span>
+  <span class="nx">UI</span><span class="p">.</span><span class="nx">changeTheme</span><span class="p">({</span>
+    <span class="nx">base</span><span class="o">:</span> <span class="s2">&quot;#424642&quot;</span><span class="p">,</span>
+    <span class="nx">font</span><span class="o">:</span> <span class="s2">&quot;#f3f4ed&quot;</span><span class="p">,</span>
+    <span class="nx">primary</span><span class="o">:</span> <span class="s2">&quot;#c06014&quot;</span><span class="p">,</span>
+    <span class="nx">sidebar</span><span class="o">:</span> <span class="s2">&quot;#536162&quot;</span><span class="p">,</span>
+    <span class="nx">inkBrand</span><span class="o">:</span> <span class="s2">&quot;#e2d5d5&quot;</span>
+  <span class="p">})</span>
+  <span class="c1">// Above code will create greyish theme for the editor.</span>
 
-  <span class="kd">const</span> <span class="nx">sidebarObject</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
-    <span class="nx">sidebarTitle</span><span class="o">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
-    <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
-    <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;myUniqueSidebarId&quot;</span><span class="p">,</span>
-    <span class="nx">children</span><span class="o">:</span><span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
-        <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;Click Me!&quot;</span><span class="p">,</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="nx">btnId</span><span class="p">,</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">});</span>
-
-  <span class="nx">UI</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span><span class="nx">btnId</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">clickHandler</span><span class="p">)</span>
-
-  <span class="kd">function</span> <span class="nx">clickHandler</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Button Clicked!&quot;</span><span class="p">)</span>
-  <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
 </td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">changeTheme</span></code> api will only work if your plugin theme modifier is selected by the user in INK editor.
+For more info on how to make theme changes on INK editor, check here.</p>
+</div>
 </div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 7%" />
-<col style="width: 11%" />
-<col style="width: 82%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 71%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -292,17 +287,67 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>componentId</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">|</span> <span class="pre">Number</span></code></p></td>
-<td><p>Id of the UI Component whose event we need to listen to.</p></td>
+<tr class="row-even"><td><p>options</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>Required. Contains the Hex colors for INK editor theme.</p></td>
 </tr>
-<tr class="row-odd"><td><p>eventName</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>Name of the event. Every component can have different event that they emit like click, change, etc.</p></td>
+</tbody>
+</table>
+</div>
+<div class="section" id="options">
+<h2>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
-<tr class="row-even"><td><p>ListenerCB</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Function</span></code></p></td>
-<td><p>Callback function to be called when the event occurs.</p></td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>base</p></td>
+<td><p>true</p></td>
+<td><p>changes theme background color. This field is required while changing theme.</p></td>
+</tr>
+<tr class="row-odd"><td><p>font</p></td>
+<td><p>true</p></td>
+<td><p>changes the color of the font used in the INK Editor. This field is required while changing theme.</p></td>
+</tr>
+<tr class="row-even"><td><p>primary</p></td>
+<td><p>false</p></td>
+<td><p>color of link, icon, active state, selection state and hover state.</p></td>
+</tr>
+<tr class="row-odd"><td><p>border</p></td>
+<td><p>false</p></td>
+<td><p>color of borders and separators used in left and right sidebars.</p></td>
+</tr>
+<tr class="row-even"><td><p>panelIcon</p></td>
+<td><p>false</p></td>
+<td><p>color of icons on left and right sidebars.</p></td>
+</tr>
+<tr class="row-odd"><td><p>toggle</p></td>
+<td><p>false</p></td>
+<td><p>color of boxes related to tasks.</p></td>
+</tr>
+<tr class="row-even"><td><p>sidebar</p></td>
+<td><p>false</p></td>
+<td><p>color of left and right sidebar.</p></td>
+</tr>
+<tr class="row-odd"><td><p>inputBase</p></td>
+<td><p>false</p></td>
+<td><p>background color of inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p>sidebarHover</p></td>
+<td><p>false</p></td>
+<td><p>background color in sidebar when hovered.</p></td>
+</tr>
+<tr class="row-odd"><td><p>inkBrand</p></td>
+<td><p>false</p></td>
+<td><p>INK brand color (pink)</p></td>
 </tr>
 </tbody>
 </table>
@@ -315,8 +360,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="addComponent.html" class="btn btn-neutral float-right" title="addComponent UI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="create.html" class="btn btn-neutral float-left" title="create UI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="addThemeModifier.html" class="btn btn-neutral float-right" title="addThemeModifier UI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="removeComponent.html" class="btn btn-neutral float-left" title="removeComponent UI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
