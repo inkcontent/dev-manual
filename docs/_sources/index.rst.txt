@@ -45,6 +45,7 @@ Welcome to INK API's documentation!
 	advanced/debug-window
 	advanced/permissions
 	advanced/plugin-workers
+	advanced/modify-editor-theme
 	advanced/INK-Editor-Blocks-Architecture
 	
 
