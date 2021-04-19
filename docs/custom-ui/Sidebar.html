@@ -214,11 +214,15 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
 <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
-  <span class="kd">const</span> <span class="nx">sidebarObj</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">uiCreate</span><span class="p">({</span>
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">sidebarObj</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
     <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
     <span class="nx">sidebarTitle</span><span class="o">:</span> <span class="s2">&quot;Personal Sidebar&quot;</span><span class="p">,</span>
     <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
