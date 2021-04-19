@@ -13,7 +13,9 @@ Example
 
     INKAPI.ready(async () => {
 
-      const sidebarObj = await INKAPI.uiCreate({
+      const UI = INKAPI.ui;
+
+      const sidebarObj = await UI.create({
         type: "Sidebar",
         sidebarTitle: "Personal Sidebar",
         icon: "./sample.svg",

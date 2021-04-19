@@ -187,15 +187,15 @@
 <h1>Custom UI<a class="headerlink" href="#custom-ui" title="Permalink to this headline">¶</a></h1>
 <p>INK Editor allows plugins to create their own custom sidebar and its content. Using this, plugins can easily create an interface for their settings, personalization, or maybe just their descriptions.</p>
 <p>INK Editor use simple JSON based architecture to create custom sidebar and it’s child components. Which allows the power to create complex UI with simplicity.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">uiCreate</span><span class="p">({</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">UI</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
   <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
   <span class="n">sidebarTitle</span><span class="p">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
   <span class="n">icon</span><span class="p">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
 <span class="p">});</span>
 </pre></div>
 </div>
-<p>In the above code we are making use of <code class="docutils literal notranslate"><span class="pre">uiCreate</span></code> API to create a custom sidebar with title ‘My Personal Sidebar’ and custom icon. Yes! it is that easy.</p>
-<p>As you can see in the example that we are passing JavaScript object with some data to the <code class="docutils literal notranslate"><span class="pre">uiCreate</span></code> API. Let’s break it down. Following are the most common and standard fields for all ui components.</p>
+<p>In the above code we are making use of <code class="docutils literal notranslate"><span class="pre">UI.create</span></code> API to create a custom sidebar with title ‘My Personal Sidebar’ and custom icon. Yes! it is that easy.</p>
+<p>As you can see in the example that we are passing JavaScript object with some data to the <code class="docutils literal notranslate"><span class="pre">UI.create</span></code> API. Let’s break it down. Following are the most common and standard fields for all ui components.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 6%" />
@@ -225,7 +225,7 @@
 </table>
 <p>Above are the standard fields and can be used in all element. Other than above fields, each element have their own unique fields.</p>
 <p>Now, if we look at above code example it will only create an empty sidebar which isn’t much useful. To create child components in the custom sidebar, we use <code class="docutils literal notranslate"><span class="pre">children</span></code> field which accepts an array of objects.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">uiCreate</span><span class="p">({</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">UI</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
   <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
   <span class="n">sidebarTitle</span><span class="p">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
   <span class="n">icon</span><span class="p">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>

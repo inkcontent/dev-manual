@@ -12,8 +12,10 @@ Example
     import INKAPI from './inkapi.js'
 
     INKAPI.ready(async () => {
+      
+      const UI = INKAPI.ui;
 
-      const sidebarObj = await INKAPI.uiCreate({
+      const sidebarObj = await UI.create({
         type: "Sidebar",
         sidebarTitle: "Personal Sidebar",
         icon: "./sample.svg",
