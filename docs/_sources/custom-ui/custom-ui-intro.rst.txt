@@ -7,11 +7,17 @@ INK Editor use simple JSON based architecture to create custom sidebar and it's 
 
 .. code::
 
-  const sidebar = await UI.create({
-    type: "Sidebar",
-    sidebarTitle: "My Personal Sidebar",
-    icon: "./sample.svg",
-  });
+  import INKAPI from './inkapi.js'
+
+  INKAPI.ready(()=>{
+    const UI = INKAPI.ui;
+  
+    const sidebar = await UI.create({
+      type: "Sidebar",
+      sidebarTitle: "My Personal Sidebar",
+      icon: "./sample.svg",
+    });
+  })
 
 In the above code we are making use of ``UI.create`` API to create a custom sidebar with title 'My Personal Sidebar' and custom icon. Yes! it is that easy.
 
@@ -32,30 +38,37 @@ Above are the standard fields and can be used in all element. Other than above f
 Now, if we look at above code example it will only create an empty sidebar which isn't much useful. To create child components in the custom sidebar, we use ``children`` field which accepts an array of objects.
 
 .. code::
+  
+  import INKAPI from './inkapi.js'
 
-  const sidebar = await UI.create({
-    type: "Sidebar",
-    sidebarTitle: "My Personal Sidebar",
-    icon: "./sample.svg",
-    children: [
-      {
-        type: "Input",
-        id: "input",
-        styles: {
-          margin: "10px auto",
-          width: "95%",
+  INKAPI.ready(()=>{
+    const UI = INKAPI.ui;
+
+    const sidebar = await UI.create({
+      type: "Sidebar",
+      sidebarTitle: "My Personal Sidebar",
+      icon: "./sample.svg",
+      children: [
+        {
+          type: "Input",
+          id: "input",
+          styles: {
+            margin: "10px auto",
+            width: "95%",
+          },
         },
-      },
-      {
-        type: "Button",
-        id: "imgBtn",
-        image: "./dice.jpg",
-        styles: {
-          width: "220px",
-          height: "220px",
+        {
+          type: "Button",
+          id: "imgBtn",
+          image: "./dice.jpg",
+          styles: {
+            width: "220px",
+            height: "220px",
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
+  })
+
 
 In the above example we are create a custom sidebar with two children components (an input and a button).
