@@ -1,7 +1,7 @@
 Demo Plugins
 ============
 
- * `MS Word DocX <https://github.com/inkcontent/ms-word-docx>`_ - imports/exports Docx format in INK Editor. - `Download <https://github.com/inkcontent/ms-word-docx/raw/main/dist/ms-word-docx.dye>`_
+ * `Docx Plus <https://github.com/inkcontent/docx-plus>`_ - imports/exports Docx format in INK Editor. - `Download <https://github.com/inkcontent/docx-plus/raw/main/dist/docx-plus.dye>`_
  * `TOC Plus <https://github.com/inkcontent/TOC-Plus>`_ - generates table of contents for your article. - `Download <https://github.com/inkcontent/TOC-Plus/raw/master/dist/toc-plus.dye>`_
  * `MD Support <https://github.com/inkcontent/MD-support>`_ - allow users to use markdown shortcuts. - `Download <https://github.com/inkcontent/MD-support/raw/master/dist/MD-support.dye>`_
 
