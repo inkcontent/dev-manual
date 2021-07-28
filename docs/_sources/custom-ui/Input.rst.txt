@@ -75,3 +75,6 @@ Events
 +=======================+=================================================================================================================================+
 | change                | This event is triggered when the input value is changed.                                                                        |
 +-----------------------+---------------------------------------------------------------------------------------------------------------------------------+
+
+.. note::
+  To learn more about shadow methods and shadow objects, please refer `here <./custom-ui-intro.html#shadow-ui-objects>`_.
