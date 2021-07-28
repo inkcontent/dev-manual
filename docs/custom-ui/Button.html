@@ -107,11 +107,12 @@
 <p class="caption"><span class="caption-text">Custom UI:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="custom-ui-intro.html">Custom UI</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="custom-elements.html">Custom Elements</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ui-components.html">UI Components</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Sidebar.html">Sidebar</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Button</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shadow-methods">Shadow Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#events">Events</a></li>
 </ul>
 </li>
@@ -126,7 +127,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../advanced/debug-window.html">Debug Window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/permissions.html">Permissions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/plugin-workers.html">Plugin Workers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/modify-editor-theme.html">Modify Editor Theme</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
 </ul>
 
@@ -176,7 +176,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="custom-elements.html">Custom Elements</a> &raquo;</li>
+          <li><a href="ui-components.html">UI Components</a> &raquo;</li>
         
       <li>Button</li>
     
@@ -258,9 +258,9 @@
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 4%" />
-<col style="width: 12%" />
-<col style="width: 84%" />
+<col style="width: 6%" />
+<col style="width: 11%" />
+<col style="width: 82%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -285,9 +285,59 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
 <td><p>You can pass your image source url (relative to the assets folder in your plugin src directory) here. This will make button act like clickable image.</p></td>
 </tr>
-<tr class="row-even"><td><p>styles?</p></td>
+<tr class="row-even"><td><p>rightIcon?</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
-<td><p>Custom styles for the element.</p></td>
+<td><p>You can pass your icon image source url here, to be placed on the right side of button.</p></td>
+</tr>
+<tr class="row-odd"><td><p>tooltip?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>The string passed in this param will be displayed as a tooltip for the button element.</p></td>
+</tr>
+<tr class="row-even"><td><p>leftIcon?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>You can pass your icon image source url here, to be placed on the left side of button.</p></td>
+</tr>
+<tr class="row-odd"><td><p>styles?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>Custom styles for the root element.</p></td>
+</tr>
+<tr class="row-even"><td><p>textStyles?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>Custom styles for the inner text element.</p></td>
+</tr>
+<tr class="row-odd"><td><p>rightIconStyles?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>Custom styles for the right icon element.</p></td>
+</tr>
+<tr class="row-even"><td><p>leftIconStyles?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>Custom styles for the left icon element.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="shadow-methods">
+<h2>Shadow Methods<a class="headerlink" href="#shadow-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 17%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Methods</p></th>
+<th class="head"><p>Arguments</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>changeText</p></td>
+<td><p>text: <code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>Using this function plugin can change the text label of the button.</p></td>
+</tr>
+<tr class="row-odd"><td><p>setStyles</p></td>
+<td><p>styles: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>This function is use to apply styles to the root of the element.</p></td>
 </tr>
 </tbody>
 </table>
@@ -308,8 +358,18 @@
 <tr class="row-even"><td><p>click</p></td>
 <td><p>This event is triggered when the button is clicked.</p></td>
 </tr>
+<tr class="row-odd"><td><p>mouseenter</p></td>
+<td><p>This event is triggered when the mouse cursor enters the button element.</p></td>
+</tr>
+<tr class="row-even"><td><p>mouseleave</p></td>
+<td><p>This event is triggered when the mouse cursor leaves the button element.</p></td>
+</tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To learn more about shadow methods and shadow objects, please refer <a class="reference external" href="./custom-ui-intro.html#shadow-ui-objects">here</a>.</p>
+</div>
 </div>
 </div>
 

@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Custom Elements" href="custom-elements.html" />
+    <link rel="next" title="UI Components" href="ui-components.html" />
     <link rel="prev" title="getReadability NLP" href="../api/nlp/getReadability.html" /> 
 </head>
 
@@ -106,15 +106,17 @@
 </ul>
 <p class="caption"><span class="caption-text">Custom UI:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Custom UI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom-elements.html">Custom Elements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Custom UI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#shadow-ui-objects">Shadow UI Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui-components.html">UI Components</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Advanced:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/debug-window.html">Debug Window</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/permissions.html">Permissions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/plugin-workers.html">Plugin Workers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/modify-editor-theme.html">Modify Editor Theme</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/INK-Editor-Blocks-Architecture.html">INK Editor Blocks Architecture</a></li>
 </ul>
 
@@ -187,19 +189,29 @@
 <h1>Custom UI<a class="headerlink" href="#custom-ui" title="Permalink to this headline">¶</a></h1>
 <p>INK Editor allows plugins to create their own custom sidebar and its content. Using this, plugins can easily create an interface for their settings, personalization, or maybe just their descriptions.</p>
 <p>INK Editor use simple JSON based architecture to create custom sidebar and it’s child components. Which allows the power to create complex UI with simplicity.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">INKAPI</span> <span class="kn">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
-<span class="n">INKAPI</span><span class="o">.</span><span class="n">ready</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
-  <span class="n">const</span> <span class="n">UI</span> <span class="o">=</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">ui</span><span class="p">;</span>
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()=&gt;{</span>
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
 
-  <span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">UI</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
-    <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
-    <span class="n">sidebarTitle</span><span class="p">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
-    <span class="n">icon</span><span class="p">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
+  <span class="kd">const</span> <span class="nx">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">sidebarTitle</span><span class="o">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
   <span class="p">});</span>
 <span class="p">})</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p>In the above code we are making use of <code class="docutils literal notranslate"><span class="pre">UI.create</span></code> API to create a custom sidebar with title ‘My Personal Sidebar’ and custom icon. Yes! it is that easy.</p>
 <p>As you can see in the example that we are passing JavaScript object with some data to the <code class="docutils literal notranslate"><span class="pre">UI.create</span></code> API. Let’s break it down. Following are the most common and standard fields for all ui components.</p>
 <table class="docutils align-default">
@@ -231,39 +243,165 @@
 </table>
 <p>Above are the standard fields and can be used in all element. Other than above fields, each element have their own unique fields.</p>
 <p>Now, if we look at above code example it will only create an empty sidebar which isn’t much useful. To create child components in the custom sidebar, we use <code class="docutils literal notranslate"><span class="pre">children</span></code> field which accepts an array of objects.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">INKAPI</span> <span class="kn">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
-<span class="n">INKAPI</span><span class="o">.</span><span class="n">ready</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
-  <span class="n">const</span> <span class="n">UI</span> <span class="o">=</span> <span class="n">INKAPI</span><span class="o">.</span><span class="n">ui</span><span class="p">;</span>
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()=&gt;{</span>
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
 
-  <span class="n">const</span> <span class="n">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">UI</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
-    <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
-    <span class="n">sidebarTitle</span><span class="p">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
-    <span class="n">icon</span><span class="p">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
-    <span class="n">children</span><span class="p">:</span> <span class="p">[</span>
+  <span class="kd">const</span> <span class="nx">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">sidebarTitle</span><span class="o">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
-        <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Input&quot;</span><span class="p">,</span>
-        <span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;input&quot;</span><span class="p">,</span>
-        <span class="n">styles</span><span class="p">:</span> <span class="p">{</span>
-          <span class="n">margin</span><span class="p">:</span> <span class="s2">&quot;10px auto&quot;</span><span class="p">,</span>
-          <span class="n">width</span><span class="p">:</span> <span class="s2">&quot;95%&quot;</span><span class="p">,</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Input&quot;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;input&quot;</span><span class="p">,</span>
+        <span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">margin</span><span class="o">:</span> <span class="s2">&quot;10px auto&quot;</span><span class="p">,</span>
+          <span class="nx">width</span><span class="o">:</span> <span class="s2">&quot;95%&quot;</span><span class="p">,</span>
         <span class="p">},</span>
       <span class="p">},</span>
       <span class="p">{</span>
-        <span class="nb">type</span><span class="p">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
-        <span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;imgBtn&quot;</span><span class="p">,</span>
-        <span class="n">image</span><span class="p">:</span> <span class="s2">&quot;./dice.jpg&quot;</span><span class="p">,</span>
-        <span class="n">styles</span><span class="p">:</span> <span class="p">{</span>
-          <span class="n">width</span><span class="p">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
-          <span class="n">height</span><span class="p">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;imgBtn&quot;</span><span class="p">,</span>
+        <span class="nx">image</span><span class="o">:</span> <span class="s2">&quot;./dice.jpg&quot;</span><span class="p">,</span>
+        <span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">width</span><span class="o">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
+          <span class="nx">height</span><span class="o">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
         <span class="p">},</span>
       <span class="p">},</span>
     <span class="p">],</span>
   <span class="p">});</span>
 <span class="p">})</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p>In the above example we are create a custom sidebar with two children components (an input and a button).</p>
+<div class="section" id="shadow-ui-objects">
+<h2>Shadow UI Objects<a class="headerlink" href="#shadow-ui-objects" title="Permalink to this headline">¶</a></h2>
+<p>Every UI component created by plugin (even if its child component), there is an object associated with it in global context. Using this object we can trigger methods related to that UI Component. For eg. an <code class="docutils literal notranslate"><span class="pre">Input</span></code> component have <code class="docutils literal notranslate"><span class="pre">getValue</span></code> and <code class="docutils literal notranslate"><span class="pre">setValue</span></code> methods. We call these objects Shadow UI Objects. We can access these shadow objects using a global variable called <code class="docutils literal notranslate"><span class="pre">shadowUIObjects</span></code>, which is an object itself with <cite>UI component Id</cite> as field name and their respective shadow object as value.
+Let’s take the above code example again and set the input component’s initial value to “Hello, World!”.</p>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()=&gt;{</span>
+  <span class="kd">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ui</span><span class="p">;</span>
+
+  <span class="c1">// keeping all component Ids here for better reusability and code quality</span>
+  <span class="kd">const</span> <span class="nx">componentIDs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">inputId</span><span class="o">:</span> <span class="s2">&quot;inputId&quot;</span><span class="p">,</span>
+    <span class="nx">imgBtnId</span><span class="o">:</span> <span class="s2">&quot;imgBtnId&quot;</span><span class="p">,</span>
+  <span class="p">};</span>
+
+  <span class="kd">const</span> <span class="nx">sidebar</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">sidebarTitle</span><span class="o">:</span> <span class="s2">&quot;My Personal Sidebar&quot;</span><span class="p">,</span>
+    <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Input&quot;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="nx">componentIDs</span><span class="p">.</span><span class="nx">inputId</span><span class="p">,</span>
+        <span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">margin</span><span class="o">:</span> <span class="s2">&quot;10px auto&quot;</span><span class="p">,</span>
+          <span class="nx">width</span><span class="o">:</span> <span class="s2">&quot;95%&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="nx">componentIDs</span><span class="p">.</span><span class="nx">imgBtnId</span><span class="p">,</span>
+        <span class="nx">image</span><span class="o">:</span> <span class="s2">&quot;./dice.jpg&quot;</span><span class="p">,</span>
+        <span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">width</span><span class="o">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
+          <span class="nx">height</span><span class="o">:</span> <span class="s2">&quot;220px&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">});</span>
+
+  <span class="c1">// extracting shadow object for input component</span>
+  <span class="kd">const</span> <span class="nx">inputShadowObj</span> <span class="o">=</span> <span class="nx">shadowUIObjects</span><span class="p">[</span><span class="nx">componentIDs</span><span class="p">.</span><span class="nx">inputId</span><span class="p">];</span>
+
+  <span class="c1">// setting input initial value to &quot;Hello, World!&quot;</span>
+  <span class="nx">inputShadowObj</span><span class="o">?</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">);</span>
+
+<span class="p">})</span>
+</pre></div>
+</td></tr></table></div>
+<p>Notice how I have grouped all component Ids in a single object. That is a recommended way to deal with UI components and will help once your plugin scales.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To learn more about all the methods you can call from shadow object. Check the UI components detail page.</p>
+</div>
+</div>
 </div>
 
 
@@ -272,7 +410,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="custom-elements.html" class="btn btn-neutral float-right" title="Custom Elements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ui-components.html" class="btn btn-neutral float-right" title="UI Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../api/nlp/getReadability.html" class="btn btn-neutral float-left" title="getReadability NLP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

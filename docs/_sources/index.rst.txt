@@ -36,7 +36,7 @@ Welcome to INK API's documentation!
 	:caption: Custom UI:
 
 	custom-ui/custom-ui-intro
-	custom-ui/custom-elements
+	custom-ui/ui-components
 	
 .. toctree::
 	:maxdepth: 1
@@ -45,7 +45,6 @@ Welcome to INK API's documentation!
 	advanced/debug-window
 	advanced/permissions
 	advanced/plugin-workers
-	advanced/modify-editor-theme
 	advanced/INK-Editor-Blocks-Architecture
 	
 
