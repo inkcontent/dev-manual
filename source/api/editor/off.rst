@@ -3,10 +3,6 @@ off ``EDITOR``
 
 `off` API is used to remove all event handlers for a specific event.
 
-.. warning::
-  This API will be deprecated soon. Use `UI.off <../ui/off.html>`_ here instead.
-
-
 Syntax
 ++++++
 
@@ -40,10 +36,13 @@ Parameters
 | event    | ``String``   | Required. A String that specifies the name of the event.              |
 +----------+--------------+-----------------------------------------------------------------------+
 
-
 Events
 ++++++
 
 Following events are available for plugins to subscribe to;
 
-``"contentChange"``
++---------------+---------------------------------------------------------------------------------------+
+| Event         | Description                                                                           |
++===============+=======================================================================================+
+| contentChange | This event is triggered every time the INK editor content is changed.                 |
++---------------+---------------------------------------------------------------------------------------+

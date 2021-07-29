@@ -3,9 +3,6 @@ on ``EDITOR``
 
 `on` API is used to register event listener for a specific event.
 
-.. warning::
-  This API will be deprecated soon. Use `UI.on <../ui/on.html>`_ here instead.
-
 Syntax
 ++++++
 
@@ -45,10 +42,13 @@ Parameters
 | event    | ``String``   | Required. A String that specifies the name of the event.              |
 +----------+--------------+-----------------------------------------------------------------------+
 
-
 Events
 ++++++
 
 Following events are available for plugins to subscribe to;
 
-``"contentChange"``
++---------------+---------------------------------------------------------------------------------------+
+| Event         | Description                                                                           |
++===============+=======================================================================================+
+| contentChange | This event is triggered every time the INK editor content is changed.                 |
++---------------+---------------------------------------------------------------------------------------+
