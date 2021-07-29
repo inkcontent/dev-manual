@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Input &mdash; INK API 2.0 documentation</title>
+  <title>Text &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Container" href="Container.html" />
-    <link rel="prev" title="Textarea" href="Textarea.html" /> 
+    <link rel="next" title="Textarea" href="Textarea.html" />
+    <link rel="prev" title="Button" href="Button.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,15 +110,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="ui-components.html">UI Components</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Sidebar.html">Sidebar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Button.html">Button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Text.html">Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Textarea.html">Textarea</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Input</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#shadow-methods">Shadow Methods</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#events">Events</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="Textarea.html">Textarea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Input.html">Input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Container.html">Container</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Toggle.html">Toggle</a></li>
 </ul>
@@ -180,13 +179,13 @@
         
           <li><a href="ui-components.html">UI Components</a> &raquo;</li>
         
-      <li>Input</li>
+      <li>Text</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/custom-ui/Input.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/custom-ui/Text.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -199,9 +198,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="input">
-<h1>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">Input</span></code> component creates an input element in the sidebar content. It will emit ‘change’ event that user can subscribe to using <code class="docutils literal notranslate"><span class="pre">INKAPI.addEvent</span></code>.</p>
+  <div class="section" id="text">
+<h1>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Text</span></code> component can be used to add some text content in your sidebar.</p>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -238,13 +237,13 @@
     <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Sidebar&quot;</span><span class="p">,</span>
     <span class="nx">sidebarTitle</span><span class="o">:</span> <span class="s2">&quot;Personal Sidebar&quot;</span><span class="p">,</span>
     <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;./sample.svg&quot;</span><span class="p">,</span>
-    <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">[</span><span class="sb">``</span>
       <span class="p">{</span>
-        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Input&quot;</span><span class="p">,</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;myInp&quot;</span><span class="p">,</span>
-        <span class="nx">placeholder</span><span class="o">:</span> <span class="s2">&quot;Search here...&quot;</span><span class="p">,</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;myTxt&quot;</span><span class="p">,</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;This is a special message.&quot;</span><span class="p">,</span>
         <span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
-          <span class="s2">&quot;border-radius&quot;</span><span class="o">:</span> <span class="s2">&quot;5px&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;color&quot;</span><span class="o">:</span> <span class="s2">&quot;#777&quot;</span><span class="p">,</span>
         <span class="p">}</span>
       <span class="p">},</span>
     <span class="p">],</span>
@@ -276,24 +275,16 @@
 <td><p>You can assign a unique id to the component. It will be helpful for listening to events and removing component in future. If <code class="docutils literal notranslate"><span class="pre">id</span></code> is not given by user (or if given <code class="docutils literal notranslate"><span class="pre">id</span></code> is already associated with a UI component) then an automatically generated id is assigned to the component.</p></td>
 </tr>
 <tr class="row-odd"><td><p>type</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Input</span></code></p></td>
-<td><p>This field should be passed <code class="docutils literal notranslate"><span class="pre">Input</span></code> as value to create a Input component. This value is case-sensitive.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Text</span></code></p></td>
+<td><p>This field should be passed <code class="docutils literal notranslate"><span class="pre">Text</span></code> as value to create a Text component. This value is case-sensitive.</p></td>
 </tr>
-<tr class="row-even"><td><p>placeholder?</p></td>
+<tr class="row-even"><td><p>text</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>Placeholder value for the input element.</p></td>
+<td><p>Text content for the component.</p></td>
 </tr>
 <tr class="row-odd"><td><p>styles?</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
 <td><p>Custom styles for the element.</p></td>
-</tr>
-<tr class="row-even"><td><p>rootStyles?</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
-<td><p>Custom styles for the root wrapper element.</p></td>
-</tr>
-<tr class="row-odd"><td><p>clearable?</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Boolean</span></code></p></td>
-<td><p>Enabling this will display clear icon on input which will clear the input value on click.</p></td>
 </tr>
 </tbody>
 </table>
@@ -313,32 +304,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>setValue</p></td>
-<td><p>value: <code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>This funciton is used to set value of the input component.</p></td>
+<tr class="row-even"><td><p>changeText</p></td>
+<td><p>newText: <code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>This funciton is used to update text content of the Text component.</p></td>
 </tr>
-<tr class="row-odd"><td><p>getValue</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">none</span></code></p></td>
-<td><p>This function is used to get the current value of the input component.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="events">
-<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Event Keyword</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>change</p></td>
-<td><p>This event is triggered when the input value is changed.</p></td>
+<tr class="row-odd"><td><p>setStyles</p></td>
+<td><p>styles: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
+<td><p>Update your Text component styles using this function.</p></td>
 </tr>
 </tbody>
 </table>
@@ -355,8 +327,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Container.html" class="btn btn-neutral float-right" title="Container" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="Textarea.html" class="btn btn-neutral float-left" title="Textarea" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Textarea.html" class="btn btn-neutral float-right" title="Textarea" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Button.html" class="btn btn-neutral float-left" title="Button" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

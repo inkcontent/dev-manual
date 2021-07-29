@@ -8,6 +8,8 @@ Following are all the UI Components plugins can use to create their Sidebar and 
 	
 	./Sidebar
 	./Button
+	./Text
+	./Textarea
 	./Input
 	./Container
 	./Toggle
