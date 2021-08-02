@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>setBlockData EDITOR &mdash; INK API 2.0 documentation</title>
+  <title>insertImage EDITOR &mdash; INK API 2.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="setSelection EDITOR" href="setSelection.html" />
-    <link rel="prev" title="removeBlock EDITOR" href="removeBlock.html" /> 
+    <link rel="next" title="insertText EDITOR" href="insertText.html" />
+    <link rel="prev" title="insertBlock EDITOR" href="insertBlock.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -111,7 +111,13 @@
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getText.html">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="insertBlock.html">insertBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="insertImage.html">insertImage <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">insertImage <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">options</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="insertText.html">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="insertTextAtCursor.html">insertTextAtCursor <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="loadHTML.html">loadHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
@@ -119,13 +125,7 @@
 <li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#options">options</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 </ul>
 </li>
@@ -197,13 +197,13 @@
         
           <li><a href="../namespaces.html">API Namespaces</a> &raquo;</li>
         
-      <li>setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></li>
+      <li>insertImage <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/api/editor/setBlockData.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/editor/insertImage.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -216,12 +216,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="setblockdata-editor">
-<h1>setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#setblockdata-editor" title="Permalink to this headline">¶</a></h1>
-<p><cite>setBlockData</cite> API is used to change meta data of any content block in INK Editor.</p>
+  <div class="section" id="insertimage-editor">
+<h1>insertImage <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code><a class="headerlink" href="#insertimage-editor" title="Permalink to this headline">¶</a></h1>
+<p><cite>insertImage</cite> API is used to insert image into your INK editor content at the position of the cursor.</p>
 <div class="section" id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">setBlockData</span><span class="p">(</span><span class="nx">data</span> <span class="o">:</span> <span class="nb">Object</span><span class="p">,</span> <span class="nx">path</span> <span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nb">Number</span><span class="o">&gt;</span><span class="p">)</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">insertImage</span><span class="p">({</span> <span class="nx">src</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">caption</span><span class="o">?:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">alt</span><span class="o">?:</span> <span class="nb">String</span> <span class="p">})</span> <span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -239,21 +239,17 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nx">INKAPI</span> <span class="nx">from</span> <span class="s1">&#39;./inkapi.js&#39;</span>
 
-<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="nx">INKAPI</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
   <span class="kd">const</span> <span class="nx">EDITOR</span> <span class="o">=</span> <span class="nx">INKAPI</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
 
-  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;my favorite cat&quot;</span><span class="p">,</span>
-    <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;This is a picture of my favorite cat&quot;</span><span class="p">,</span>
-    <span class="nx">alt</span><span class="o">:</span> <span class="s2">&quot;Cat Playing&quot;</span><span class="p">,</span>
-  <span class="p">};</span>
-
-  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">setBlockData</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="p">[</span><span class="mf">3</span><span class="p">]);</span>
+  <span class="nx">EDITOR</span><span class="p">.</span><span class="nx">insertImage</span><span class="p">({</span>
+    <span class="nx">src</span><span class="o">:</span> <span class="s2">&quot;https://picsum.photos/500/400&quot;</span><span class="p">,</span>
+    <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;Above is a random image&quot;</span><span class="p">,</span>
+    <span class="nx">alt</span><span class="o">:</span> <span class="s2">&quot;random image&quot;</span>
+  <span class="p">});</span>
 
 <span class="p">});</span>
 </pre></div>
@@ -276,11 +272,7 @@
 <tbody>
 <tr class="row-even"><td><p>options</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code></p></td>
-<td><p>Required. data to be implemented on block.</p></td>
-</tr>
-<tr class="row-odd"><td><p>path</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Array&lt;Number&gt;</span></code></p></td>
-<td><p>Required. Path of the block.</p></td>
+<td><p>Required. data for image insertion.</p></td>
 </tr>
 </tbody>
 </table>
@@ -300,44 +292,20 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>file</p></td>
+<tr class="row-even"><td><p>src</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>sets src url for the image block.</p></td>
+<td><p>src url for the image.</p></td>
 </tr>
-<tr class="row-odd"><td><p>type</p></td>
+<tr class="row-odd"><td><p>caption?</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>this option can change block type. Valid block types are: <code class="docutils literal notranslate"><span class="pre">heading-two</span></code>, <code class="docutils literal notranslate"><span class="pre">heading-three</span></code>, <code class="docutils literal notranslate"><span class="pre">heading-four</span></code>, <code class="docutils literal notranslate"><span class="pre">numbered-list</span></code>, <code class="docutils literal notranslate"><span class="pre">bulleted-list</span></code>, <code class="docutils literal notranslate"><span class="pre">list-item</span></code>, <code class="docutils literal notranslate"><span class="pre">paragraph</span></code>, <code class="docutils literal notranslate"><span class="pre">quote</span></code>.</p></td>
+<td><p>caption text for the image.</p></td>
 </tr>
-<tr class="row-even"><td><p>title</p></td>
+<tr class="row-even"><td><p>alt?</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>sets title for the image block.</p></td>
-</tr>
-<tr class="row-odd"><td><p>caption</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>sets caption text for the image block.</p></td>
-</tr>
-<tr class="row-even"><td><p>alt</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>sets alt text for the image block.</p></td>
-</tr>
-<tr class="row-odd"><td><p>size</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Number</span></code></p></td>
-<td><p>sets image size range between 20 - 100.</p></td>
-</tr>
-<tr class="row-even"><td><p>quality</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Number</span></code></p></td>
-<td><p>set image quality range between 30 - 100.</p></td>
-</tr>
-<tr class="row-odd"><td><p>align</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>Set alignment for the block. Valid alignments are: <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code>.</p></td>
+<td><p>alt text for the image.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Learn more about how blocks work in INK editor <a class="reference external" href="../../advanced/INK-Editor-Blocks-Architecture.html">here</a>.</p>
-</div>
 </div>
 </div>
 
@@ -347,8 +315,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="setSelection.html" class="btn btn-neutral float-right" title="setSelection EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="removeBlock.html" class="btn btn-neutral float-left" title="removeBlock EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="insertText.html" class="btn btn-neutral float-right" title="insertText EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="insertBlock.html" class="btn btn-neutral float-left" title="insertBlock EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

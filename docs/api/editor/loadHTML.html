@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="addMenuItem UI.menu" href="../ui/menu.addMenuItem.html" />
-    <link rel="prev" title="loadText EDITOR" href="loadText.html" /> 
+    <link rel="next" title="loadText EDITOR" href="loadText.html" />
+    <link rel="prev" title="insertTextAtCursor EDITOR" href="insertTextAtCursor.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,24 +104,28 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">INK APIs Intro</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../namespaces.html">API Namespaces</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../namespaces.html#editor-inkapi-editor">EDITOR <code class="docutils literal notranslate"><span class="pre">INKAPI.editor</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getAuthStatus.html">getAuthStatus <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getHTML.html">getHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getMD.html">getMD <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="getText.html">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="getAllBlocks.html">getAllBlocks <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="getSelectedData.html">getSelectedData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="getText.html">getText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insertBlock.html">insertBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insertImage.html">insertImage <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="insertText.html">insertText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="loadText.html">loadText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insertTextAtCursor.html">insertTextAtCursor <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">loadHTML <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="loadText.html">loadText <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="off.html">off <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="on.html">on <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="removeBlock.html">removeBlock <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="setBlockData.html">setBlockData <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="setSelection.html">setSelection <code class="docutils literal notranslate"><span class="pre">EDITOR</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../namespaces.html#ui-inkapi-ui">UI <code class="docutils literal notranslate"><span class="pre">INKAPI.ui</span></code></a></li>
@@ -272,8 +276,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../ui/menu.addMenuItem.html" class="btn btn-neutral float-right" title="addMenuItem UI.menu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="loadText.html" class="btn btn-neutral float-left" title="loadText EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="loadText.html" class="btn btn-neutral float-right" title="loadText EDITOR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="insertTextAtCursor.html" class="btn btn-neutral float-left" title="insertTextAtCursor EDITOR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -9,29 +9,35 @@ EDITOR ``INKAPI.editor``
 .. toctree::
 	:maxdepth: 1
 	
-	editor/getHTML
-	editor/getMD
-	editor/getText
-	editor/on
-	editor/off
 	editor/getAllBlocks
-	editor/removeBlock
-	editor/getSelectedData
-	editor/setSelection
-	editor/setBlockData
+	editor/getAuthStatus
+	editor/getHTML 
+	editor/getMD
+	editor/getSelectedData 
+	editor/getText 
+	editor/insertBlock
+	editor/insertImage
 	editor/insertText
+	editor/insertTextAtCursor
+	editor/loadHTML 
 	editor/loadText
-	editor/loadHTML
+	editor/off
+	editor/on
+	editor/removeBlock 
+	editor/setBlockData
+	editor/setSelection
    
 UI ``INKAPI.ui``
 ++++++++++++++++
 .. toctree::
 	:maxdepth: 1
 	
-	ui/menu.addMenuItem
-	ui/create
-	ui/addEvent
 	ui/addComponent
+	ui/addEvent
+	ui/create
+	ui/ink.showINKPointsModal
+	ui/ink.getINKPointsCount
+	ui/menu.addMenuItem
 	ui/removeComponent
 
 IO ``INKAPI.io``
@@ -39,9 +45,9 @@ IO ``INKAPI.io``
 .. toctree::
 	:maxdepth: 1
 	
-	io/saveFile
-	io/openFile
 	io/associateFileType
+	io/openFile
+	io/saveFile
 
 
 NET ``INKAPI.net``
@@ -49,9 +55,9 @@ NET ``INKAPI.net``
 .. toctree::
 	:maxdepth: 1
 
-	net/request
 	net/get
 	net/post
+	net/request
 
 
 NLP ``INKAPI.nlp``
